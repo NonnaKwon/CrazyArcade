@@ -1,0 +1,514 @@
+fileFormatVersion: 2
+guid: 24bf71782b6a1224da06f6c0df2ab396
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Trap1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 529
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028f71fee43879e46bd6a298e0207b28
+      internalID: -2113684434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trap2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 529
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75dcdfef3a2fe9c4e977c1c6bab7f8d9
+      internalID: 2111151381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trap3
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 529
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c8fff0e52692d479579b3044d3f73c
+      internalID: 214054177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trap4
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 530
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59cdb92148a0d184b9da340d1ef7222f
+      internalID: -287564573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Revive1
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 401
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911ecbe328050d5449af9a5cf6efba05
+      internalID: 848281260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Revive2
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 407
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5faaa09e54194d0418afa4e17bb56a64
+      internalID: 1230368598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cappi_33
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 427
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f5224b54033cb4db2cb87577c895ef
+      internalID: -1669325955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 328
+        width: 66
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330d4e97d73da8a4e9e0157e0fae5320
+      internalID: 1134925372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 329
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e871adfe5d3055419583272e2a1f2ec
+      internalID: 1893302698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die3
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 329
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5000145714a5e0a49bc73dd2c2512119
+      internalID: -1517458871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die4
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 330
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa9891a59d49f1428c3d10c2f7a1bbb
+      internalID: 1734154788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Revive3
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 718
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5c43afe7a0aa94095f3b7bd7a88d2f
+      internalID: 1147951741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CappiSmile
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 422
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f15440c0d25074b90b04d87fa65275
+      internalID: 876531643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      CappiSmile: 876531643
+      Cappi_1: 1114839902
+      Cappi_10: 1371030601
+      Cappi_11: 893772364
+      Cappi_12: -371310105
+      Cappi_13: -943863048
+      Cappi_14: -1220015424
+      Cappi_15: 1904454284
+      Cappi_16: 683005147
+      Cappi_2: 1703338658
+      Cappi_21: -1374793882
+      Cappi_22: 945286982
+      Cappi_23: -12401388
+      Cappi_24: -1030870022
+      Cappi_25: 1883382721
+      Cappi_26: 914492963
+      Cappi_27: 316002520
+      Cappi_3: -165785462
+      Cappi_30: 478365052
+      Cappi_31: -1527825684
+      Cappi_32: 410285821
+      Cappi_33: -1669325955
+      Cappi_36: -372803988
+      Cappi_37: -1706034990
+      Cappi_38: -155683759
+      Cappi_39: 169735664
+      Cappi_4: 1759060461
+      Cappi_42: 1464811819
+      Cappi_43: 66936928
+      Cappi_44: 693678746
+      Cappi_45: 1286493262
+      Cappi_46: -865794566
+      Cappi_47: -1711148900
+      Cappi_48: -295835263
+      Cappi_49: 1086130147
+      Cappi_5: 33241504
+      Cappi_50: 1603292824
+      Cappi_51: 127528481
+      Cappi_52: 95977099
+      Cappi_53: 1442018337
+      Cappi_54: -1542703162
+      Cappi_55: 1479502440
+      Cappi_56: -293170213
+      Cappi_57: -1857639371
+      Cappi_58: -1795372319
+      Cappi_59: -11484231
+      Cappi_6: -77213924
+      Cappi_60: 1641031583
+      Cappi_61: -1072597220
+      Cappi_62: -1131939777
+      Cappi_63: 580370846
+      Cappi_64: -790391483
+      Cappi_65: 1927530932
+      Cappi_66: 1244526429
+      Cappi_67: 2048077533
+      Cappi_68: 398099798
+      Cappi_69: -2087520049
+      Cappi_7: 180680020
+      Cappi_70: 1069142410
+      Cappi_71: -170273475
+      Cappi_72: -266986425
+      Cappi_73: 294540350
+      Cappi_8: 1787805426
+      Cappi_9: 1193601815
+      Die1: 1134925372
+      Die2: 1893302698
+      Die3: -1517458871
+      Die4: 1734154788
+      Revive1: 848281260
+      Revive2: 1230368598
+      Revive3: 694869398
+      Trap1: -2113684434
+      Trap2: 2111151381
+      Trap3: 214054177
+      Trap4: -287564573
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

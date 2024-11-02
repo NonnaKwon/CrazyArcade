@@ -1,0 +1,1363 @@
+fileFormatVersion: 2
+guid: ae350171bedf8b546bc8434af6fc9103
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 417
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70ad41a93a8bc249bbdbf18808153cf
+      internalID: 1330247811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 417
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baaa95774d46fce4f9ec46e8c478eba1
+      internalID: -667221652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 417
+        width: 44
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416b27ca64bdffa49877a312ce261216
+      internalID: -94679845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_3
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 417
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b377a190aea8d7048902b288c11500ed
+      internalID: -291444119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_WaterCourse_Center2
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 346
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c934178362b87e468600db0af7a84cc
+      internalID: 1092476239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_WaterCourse_Center3
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 346
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22811642704d3e0409f127232c405590
+      internalID: -1451701577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_WaterCourse_Center4
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 346
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07252ef96c2cb147824cd11837eb536
+      internalID: 781715417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_7
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 275
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f197fca5682881a4eb16bbeb79d66031
+      internalID: 17484788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_8
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 275
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6612e53722e97f4f99a7ab01b4b1d37
+      internalID: -477466620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_9
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 275
+        width: 40
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314a7f7215760cd42b80a3ed8a3d6e44
+      internalID: -605860604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_10
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 281
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d6d43089060434bb7c23d35915db1e
+      internalID: 459455517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_11
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 275
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f6506fcef609149967cb9d58e54dce
+      internalID: -1458204610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_12
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 275
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e1671ddbc4e7e4e9589d6b76aa6cff
+      internalID: 2073091971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_13
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 275
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcab1221040fc214fb392ab0e31566ed
+      internalID: 2064652444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 303
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e96a1bca16a8f4abe54676747af4da
+      internalID: 1691768391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_15
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 276
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9564f75d16dfa48b2858c66c6d6232
+      internalID: 875588387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_16
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 275
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae9c82155481594abfd0e3e02ea7775
+      internalID: -569571564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_17
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 279
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2c80e6c9200604d87396e4af291e8c
+      internalID: -1420521789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_18
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 274
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc2169b18371b34fbe8d776bdb7deed
+      internalID: -1272729918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_19
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 276
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a496a22dbd65a842a55362140561003
+      internalID: 331269670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_20
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 276
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e57eca46ef9c2749ac5d1e4884ecf8a
+      internalID: -1976697860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_21
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 200
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14fe9b1ed00d3343832999b8d355ef8
+      internalID: 1374972845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_22
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 199
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3eae410a1d5f964d8983c526caebd5a
+      internalID: 1845703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_23
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 205
+        width: 40
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01555f9eb90131742b91a9b7caca94f5
+      internalID: 680174837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_24
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 208
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea1f29a52998d64f93c1cf4dbeb0bca
+      internalID: -267390432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_25
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 227
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9090f03803e155248be9fc4bd1efdd51
+      internalID: -1464204936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_26
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 220
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adb1370dafe03744bfb3e0f24547a23
+      internalID: -1795849057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_27
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 212
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2b6d8dab530924e96d941f51bee896
+      internalID: 1866496162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_28
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 200
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739cf55b72aa2d34fa52d6c850ebda0c
+      internalID: -469598414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_29
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 200
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1832279d9e827c4fba85231d8814982
+      internalID: 329821346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_30
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 200
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba33a9254f4decc44b6c6fd3bd3d8d7d
+      internalID: 1986309236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 222
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd335c26e8715548b61b4747544c7ed
+      internalID: 718034300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_32
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 229
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f0a9fb510920d4ebaa4e2e66b695f3
+      internalID: -293159428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_33
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 200
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6d86a0db3805c4686068448e31a636
+      internalID: 310245440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_34
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 200
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef492a649ff2e146979fcae60477892
+      internalID: 1437506834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_35
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 116
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec32dd805a4fee14f974ff8bfd758c5e
+      internalID: 1659450711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_36
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 116
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10903827efef6c74a99b35bfe5c0a3fe
+      internalID: -167245641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_37
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 116
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407b8bd6646d4f34c812312424aeb101
+      internalID: -1587354420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_38
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 116
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971e7d5339668b24e82db7f6f3b0e192
+      internalID: -995089841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_39
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 135
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66fe00adeecfda548863dc9d68291720
+      internalID: -1844395730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_40
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 116
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec436fa30873c14fae7f60b27defc55
+      internalID: 654111045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_41
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 116
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5094fffa86007ce4f88a62aa5e737438
+      internalID: 453990199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_42
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 116
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125f0e554a4d0ac46a072c601d9ffb7e
+      internalID: -354168090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_43
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 116
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2281408e1f3b5498630b72dd646bc8
+      internalID: 2121685201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_44
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 118
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9e2cc73176fe240bebf8dd85258188
+      internalID: 1309308603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_45
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 41
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7de8b1bd0102d54fa9ad4c4afe15ec0
+      internalID: -1809422848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_46
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 49
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4756fa6afbe024cb20e7ddaad56f17
+      internalID: -788442979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_47
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 41
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b257ac738dcd8641af860554ec9b714
+      internalID: 854956954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_48
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 41
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea687c2e61b53074f936cee9d8418e84
+      internalID: -1918320162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_49
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 41
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b24c041ca7db134b88e7809c241df0d
+      internalID: 149108139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_50
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 41
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7711286dc85d047988bd22d1922a0c
+      internalID: 221267652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_51
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 41
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69c64a02416392488896000bf8767ab
+      internalID: -2124969177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_52
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 41
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993ce1b0e89afcd4886fb95b5a426d45
+      internalID: 116075454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_53
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 68
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997af2813add43d40acd160ca39514e3
+      internalID: 1629229964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprtie_WaterBomb_54
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 57
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c21769e01b4a814fa20367d181bdf8a
+      internalID: -699398094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Sprite_WaterCourse_Center2: 1092476239
+      Sprite_WaterCourse_Center3: -1451701577
+      Sprite_WaterCourse_Center4: 781715417
+      Sprtie_WaterBomb_0: 1330247811
+      Sprtie_WaterBomb_1: -667221652
+      Sprtie_WaterBomb_10: 459455517
+      Sprtie_WaterBomb_11: -1458204610
+      Sprtie_WaterBomb_12: 2073091971
+      Sprtie_WaterBomb_13: 2064652444
+      Sprtie_WaterBomb_14: 1691768391
+      Sprtie_WaterBomb_15: 875588387
+      Sprtie_WaterBomb_16: -569571564
+      Sprtie_WaterBomb_17: -1420521789
+      Sprtie_WaterBomb_18: -1272729918
+      Sprtie_WaterBomb_19: 331269670
+      Sprtie_WaterBomb_2: -94679845
+      Sprtie_WaterBomb_20: -1976697860
+      Sprtie_WaterBomb_21: 1374972845
+      Sprtie_WaterBomb_22: 1845703
+      Sprtie_WaterBomb_23: 680174837
+      Sprtie_WaterBomb_24: -267390432
+      Sprtie_WaterBomb_25: -1464204936
+      Sprtie_WaterBomb_26: -1795849057
+      Sprtie_WaterBomb_27: 1866496162
+      Sprtie_WaterBomb_28: -469598414
+      Sprtie_WaterBomb_29: 329821346
+      Sprtie_WaterBomb_3: -291444119
+      Sprtie_WaterBomb_30: 1986309236
+      Sprtie_WaterBomb_31: 718034300
+      Sprtie_WaterBomb_32: -293159428
+      Sprtie_WaterBomb_33: 310245440
+      Sprtie_WaterBomb_34: 1437506834
+      Sprtie_WaterBomb_35: 1659450711
+      Sprtie_WaterBomb_36: -167245641
+      Sprtie_WaterBomb_37: -1587354420
+      Sprtie_WaterBomb_38: -995089841
+      Sprtie_WaterBomb_39: -1844395730
+      Sprtie_WaterBomb_40: 654111045
+      Sprtie_WaterBomb_41: 453990199
+      Sprtie_WaterBomb_42: -354168090
+      Sprtie_WaterBomb_43: 2121685201
+      Sprtie_WaterBomb_44: 1309308603
+      Sprtie_WaterBomb_45: -1809422848
+      Sprtie_WaterBomb_46: -788442979
+      Sprtie_WaterBomb_47: 854956954
+      Sprtie_WaterBomb_48: -1918320162
+      Sprtie_WaterBomb_49: 149108139
+      Sprtie_WaterBomb_50: 221267652
+      Sprtie_WaterBomb_51: -2124969177
+      Sprtie_WaterBomb_52: 116075454
+      Sprtie_WaterBomb_53: 1629229964
+      Sprtie_WaterBomb_54: -699398094
+      Sprtie_WaterBomb_7: 17484788
+      Sprtie_WaterBomb_8: -477466620
+      Sprtie_WaterBomb_9: -605860604
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
