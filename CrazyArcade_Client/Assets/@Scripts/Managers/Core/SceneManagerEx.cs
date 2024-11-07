@@ -14,8 +14,7 @@ public class SceneManagerEx
     {
         NextSceneType = type;
         Managers.Clear();
-        AsyncOperationHandle<SceneInstance> handle = Addressables.LoadSceneAsync(GetSceneName(EScene.LoadingScene), LoadSceneMode.Single, true);
-
+        Addressables.LoadSceneAsync(GetSceneName(type), LoadSceneMode.Single, true);
     }
 
     public string GetSceneName(EScene type)

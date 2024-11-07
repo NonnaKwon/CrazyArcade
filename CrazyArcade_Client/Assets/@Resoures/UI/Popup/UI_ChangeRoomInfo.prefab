@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5250569503960788259}
   - component: {fileID: -5280855415243736958}
   m_Layer: 5
-  m_Name: UI_RoomInfoChange
+  m_Name: UI_ChangeRoomInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

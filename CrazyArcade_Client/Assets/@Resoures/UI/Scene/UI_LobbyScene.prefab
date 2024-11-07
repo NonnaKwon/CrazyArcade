@@ -738,7 +738,7 @@ GameObject:
   - component: {fileID: 2328401719870371789}
   - component: {fileID: 7745983897593332734}
   - component: {fileID: 4191502815425960781}
-  - component: {fileID: 4210860818042625027}
+  - component: {fileID: 3556986085948177638}
   m_Layer: 5
   m_Name: UI_LobbyScene
   m_TagString: Untagged
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &4210860818042625027
+--- !u!114 &3556986085948177638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -839,12 +839,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9095349668097341937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cad0bcbf63cdd7b4d9d5b7c69dddd651, type: 3}
+  m_Script: {fileID: 11500000, guid: 99692415952e74147a53b5c303f40c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTarget: {fileID: 0}
-  followOffset: {x: 0, y: 0, z: 0}
-  createRoomPopup: {fileID: 6421028944824812652, guid: e6cf14a192c3cf348b7b144d9af95e8d, type: 3}
 --- !u!1001 &1587081588497771353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -953,7 +950,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.29999542
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8051157783757591251, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1071,7 +1069,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.29999542
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8051157783757591251, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1189,7 +1188,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.2999916
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8051157783757591251, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1307,7 +1307,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.2999916
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8051157783757591251, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1425,7 +1426,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.2999916
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8051157783757591251, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1543,7 +1545,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.2999916
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8051157783757591251, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

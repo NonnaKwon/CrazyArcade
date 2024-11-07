@@ -8,7 +8,6 @@ using static Define;
 public class UIManager
 {
     private int _popupOrder = 100;
-    private int _toastOrder = 500;
 
     private List<UI_Popup> _popupList = new List<UI_Popup>();
     private UI_Scene _sceneUI = null;
