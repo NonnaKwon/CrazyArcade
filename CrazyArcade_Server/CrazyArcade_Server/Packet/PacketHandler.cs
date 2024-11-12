@@ -38,4 +38,9 @@ class PacketHandler
             () => room.Move(clientSession,movePacket)
         );
     }
+
+    public static void C_CreateRoomHandler(PacketSession session, IPacket packet)
+    {
+
+    }
 }

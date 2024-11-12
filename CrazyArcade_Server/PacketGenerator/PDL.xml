@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <PDL>
 	<packet name ="C_CreateRoom">
-		<int name="playerId"/>
-		<float name="posX"/>
-		<float name="posY"/>
-		<float name="posZ"/>
+		<int name="roomId"/>
+		<string name="roomName"/>
 	</packet>
 	<packet name="S_CreateRoom">
+		<int name="roomId"/>
+		<string name="roomName"/>
 	</packet>
 	<packet name="S_BroadcastLeaveGame">
 		<int name="playerId"/>
 	</packet>
 	<packet name="S_PlayerList">
 		<list name="player">
-			<bool name="isSelf"/>
+			<bool name="i   sSelf"/>
 			<int name="playerId"/>
 			<float name="posX"/>
 			<float name="posY"/>

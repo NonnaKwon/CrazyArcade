@@ -20,11 +20,17 @@ public class PacketManager
     public void Register()
     {
         
-        _makeFunc.Add((ushort)PacketID.C_CreateRoom, MakePacket<C_CreateRoom>);
-        _handler.Add((ushort)PacketID.C_CreateRoom, PacketHandler.C_CreateRoomHandler);
+        _makeFunc.Add((ushort)PacketID.S_CreateRoom, MakePacket<S_CreateRoom>);
+        _handler.Add((ushort)PacketID.S_CreateRoom, PacketHandler.S_CreateRoomHandler);
 
-        _makeFunc.Add((ushort)PacketID.C_Move, MakePacket<C_Move>);
-        _handler.Add((ushort)PacketID.C_Move, PacketHandler.C_MoveHandler);
+        _makeFunc.Add((ushort)PacketID.S_BroadcastLeaveGame, MakePacket<S_BroadcastLeaveGame>);
+        _handler.Add((ushort)PacketID.S_BroadcastLeaveGame, PacketHandler.S_BroadcastLeaveGameHandler);
+
+        _makeFunc.Add((ushort)PacketID.S_PlayerList, MakePacket<S_PlayerList>);
+        _handler.Add((ushort)PacketID.S_PlayerList, PacketHandler.S_PlayerListHandler);
+
+        _makeFunc.Add((ushort)PacketID.S_BroadcastMove, MakePacket<S_BroadcastMove>);
+        _handler.Add((ushort)PacketID.S_BroadcastMove, PacketHandler.S_BroadcastMoveHandler);
 
     }
 
