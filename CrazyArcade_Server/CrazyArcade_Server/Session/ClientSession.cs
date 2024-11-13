@@ -1,4 +1,5 @@
-﻿using ServerCore;
+﻿using CrazyArcade_Server.Game;
+using ServerCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace GameServer
 {
-    class ClientSession : PacketSession
+    public class ClientSession : PacketSession
     {
         public int SessionId { get; set; }
-        public GameRoom Room { get; set; }
+        private GameRoom _curRoom;
 
         public override void OnConnected(EndPoint endPoint)
         {
             Console.WriteLine($"OnConnected : {endPoint}/{SessionId}");
-            Program.Room.Push(() => Program.Room.Enter(this));
+            Program.Lobby.Push(() => Program.Lobby.Enter(this));
         }
         public override void OnRecvPacket(ArraySegment<byte> buffer)
         {
@@ -27,12 +28,6 @@ namespace GameServer
         public override void OnDisconnected(EndPoint endPoint)
         {
             SessionManager.Instance.Remove(this);
-            if(Room != null)
-            {
-                GameRoom room = Room;
-                room.Push(() => room.Leave(this));
-                Room = null; // 이따 jobQueue에 있는 아이들 Room을 찾지 못해서 크래쉬가 남.
-            }
             Console.WriteLine($"OnDisconnected : {endPoint}");
         }
 

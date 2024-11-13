@@ -1,4 +1,5 @@
 ﻿
+using CrazyArcade_Server.Game;
 using Microsoft.Win32;
 using ServerCore;
 using System;
@@ -10,11 +11,11 @@ namespace GameServer
     class Program
     {
         static Listener _listener = new Listener();
-        public static GameRoom Room = new GameRoom();
+        public static GameLobby Lobby = new GameLobby();
 
         static void FlushRoom()
         {
-            Room.Push(() => Room.Flush());
+            Lobby.Push(() => Lobby.Flush());
             JobTimer.Instance.Push(FlushRoom, 250);
         }
 

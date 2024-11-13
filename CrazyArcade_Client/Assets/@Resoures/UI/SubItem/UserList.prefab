@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 6132038034998010229}
   - component: {fileID: 7542411099848185222}
   - component: {fileID: 5694137054301005073}
-  - component: {fileID: 392619891041693362}
-  - component: {fileID: 3057171370171223454}
   m_Layer: 5
   m_Name: UserList
   m_TagString: Untagged
@@ -111,45 +109,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &392619891041693362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5176127438778105645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9712247ec3928104ba6a7c57428af44c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 21300000, guid: 72f6b7691e82d9c4699e43054f5a8dca, type: 3}
-  - {fileID: 21300000, guid: b36b8007a1343484d94c643f04c429d4, type: 3}
-  - {fileID: 21300000, guid: a8eb029e795eb5648a45fb201d751d35, type: 3}
-  - {fileID: 21300000, guid: 1d43efbe112018e4e803f95dc5594f62, type: 3}
---- !u!114 &3057171370171223454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5176127438778105645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1001 &924418124735060843
 PrefabInstance:
   m_ObjectHideFlags: 0

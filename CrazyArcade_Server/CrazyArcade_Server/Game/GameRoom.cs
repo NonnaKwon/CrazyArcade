@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using GameServer;
 using ServerCore;
 
-namespace GameServer
+namespace CrazyArcade_Server.Game
 {
     class GameRoom : IJobQueue
     {
@@ -38,7 +38,7 @@ namespace GameServer
         {
             //플레이어 추가하고
             _sessions.Add(session);
-            session.Room = this;
+            //session.Room = this;
 
             //신입생한테 모든 플레이어 목록 전송
             //S_PlayerList players = new S_PlayerList();
@@ -74,6 +74,6 @@ namespace GameServer
             //leave.playerId = session.SessionId;
             //Broadcast(leave.Write());
         }
-        
+
     }
 }
