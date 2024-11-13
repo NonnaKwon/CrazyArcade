@@ -1,7 +1,11 @@
 ﻿
+using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
+using UnityEngine;
 
 namespace ServerCore
 {
@@ -35,7 +39,7 @@ namespace ServerCore
             }
 
             if(packetCount > 1)
-                Console.WriteLine($"패킷 모아보내기 : {packetCount}");
+                Debug.Log($"패킷 모아보내기 : {packetCount}");
             return processLen;
         }
 
@@ -138,7 +142,7 @@ namespace ServerCore
                     OnSendCompleted(null, _sendArgs);
             }catch(Exception e)
             {
-                Console.WriteLine(e.ToString());
+                Debug.Log(e.ToString());
             }
             
         }
@@ -162,7 +166,7 @@ namespace ServerCore
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine($"OnSendCompleted Failed {e}");
+                        Debug.Log($"OnSendCompleted Failed {e}");
                     }
                 }
                 else
@@ -186,7 +190,7 @@ namespace ServerCore
                     OnRecvCompleted(null, _recvArgs);
             }catch(Exception e)
             {
-                Console.WriteLine(e.ToString());
+                Debug.Log(e.ToString());
             }
             
         }
@@ -224,7 +228,7 @@ namespace ServerCore
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"OnRecvCompleted Failed {e}");
+                    Debug.Log($"OnRecvCompleted Failed {e}");
                 }
             }
             else

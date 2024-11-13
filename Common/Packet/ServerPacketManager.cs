@@ -23,9 +23,6 @@ public class PacketManager
         _makeFunc.Add((ushort)PacketID.C_CreateRoom, MakePacket<C_CreateRoom>);
         _handler.Add((ushort)PacketID.C_CreateRoom, PacketHandler.C_CreateRoomHandler);
 
-        _makeFunc.Add((ushort)PacketID.C_Move, MakePacket<C_Move>);
-        _handler.Add((ushort)PacketID.C_Move, PacketHandler.C_MoveHandler);
-
     }
 
     public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer,Action<PacketSession,IPacket> onRecvCallback = null)

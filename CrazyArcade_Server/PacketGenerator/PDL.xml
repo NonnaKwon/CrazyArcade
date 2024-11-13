@@ -8,27 +8,4 @@
 		<int name="roomId"/>
 		<string name="roomName"/>
 	</packet>
-	<packet name="S_BroadcastLeaveGame">
-		<int name="playerId"/>
-	</packet>
-	<packet name="S_PlayerList">
-		<list name="player">
-			<bool name="i   sSelf"/>
-			<int name="playerId"/>
-			<float name="posX"/>
-			<float name="posY"/>
-			<float name="posZ"/>
-		</list>
-	</packet>
-	<packet name="C_Move">
-		<float name="posX"/>
-		<float name="posY"/>
-		<float name="posZ"/>
-	</packet>
-	<packet name="S_BroadcastMove">
-		<int name="playerId"/>
-		<float name="posX"/>
-		<float name="posY"/>
-		<float name="posZ"/>
-	</packet>
 </PDL>

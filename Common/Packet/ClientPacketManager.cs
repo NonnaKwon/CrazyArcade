@@ -23,15 +23,6 @@ public class PacketManager
         _makeFunc.Add((ushort)PacketID.S_CreateRoom, MakePacket<S_CreateRoom>);
         _handler.Add((ushort)PacketID.S_CreateRoom, PacketHandler.S_CreateRoomHandler);
 
-        _makeFunc.Add((ushort)PacketID.S_BroadcastLeaveGame, MakePacket<S_BroadcastLeaveGame>);
-        _handler.Add((ushort)PacketID.S_BroadcastLeaveGame, PacketHandler.S_BroadcastLeaveGameHandler);
-
-        _makeFunc.Add((ushort)PacketID.S_PlayerList, MakePacket<S_PlayerList>);
-        _handler.Add((ushort)PacketID.S_PlayerList, PacketHandler.S_PlayerListHandler);
-
-        _makeFunc.Add((ushort)PacketID.S_BroadcastMove, MakePacket<S_BroadcastMove>);
-        _handler.Add((ushort)PacketID.S_BroadcastMove, PacketHandler.S_BroadcastMoveHandler);
-
     }
 
     public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer,Action<PacketSession,IPacket> onRecvCallback = null)

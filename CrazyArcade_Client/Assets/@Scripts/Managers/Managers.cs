@@ -24,6 +24,7 @@ public class Managers : MonoBehaviour
     private SceneManagerEx _scene = new SceneManagerEx();
     private SoundManager _sound = new SoundManager();
     private UIManager _ui = new UIManager();
+    private NetworkManager _network = new NetworkManager();
 
     public static DataManager Data { get { return Instance?._data; } }
     public static PoolManager Pool { get { return Instance?._pool; } }
@@ -31,6 +32,7 @@ public class Managers : MonoBehaviour
     public static SceneManagerEx Scene { get { return Instance?._scene; } }
     public static SoundManager Sound { get { return Instance?._sound; } }
     public static UIManager UI { get { return Instance?._ui; } }
+    public static NetworkManager Network { get { return Instance?._network; } }
 
     #endregion
 
@@ -101,13 +103,18 @@ public class Managers : MonoBehaviour
             DontDestroyOnLoad(go);
             s_instance = go.GetComponent<Managers>();
             s_instance._sound.Init();
+            s_instance._network.Init();
         }		
 	}
+    private void Update()
+    {
+        _network.Update();
+    }
 
-	public static void Clear()
+    public static void Clear()
     {
         Sound.Clear();
-        //Scene.Clear();
+        Scene.Clear();
         UI.Clear();
         Pool.Clear();
     }

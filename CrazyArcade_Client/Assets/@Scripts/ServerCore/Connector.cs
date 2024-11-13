@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace ServerCore
 {
@@ -31,7 +32,7 @@ namespace ServerCore
             if (socket == null)
                 return;
 
-
+            Debug.Log($"RegisterConnect..");
             bool pending = socket.ConnectAsync(args);
             if (pending == false)
                 OnConnectCompleted(null, args);

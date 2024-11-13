@@ -9,6 +9,8 @@ public class ResourceManager
 {
     //실제 로드한 리소스.
     private Dictionary<string, UnityEngine.Object> _resources = new Dictionary<string, UnityEngine.Object>();
+    private bool _isPreload = false;
+    public bool IsPreload { get { return _isPreload; } }
 
     #region 리소스 로드
     public bool CheckResource<T>(string key) where T : Object
@@ -133,6 +135,11 @@ public class ResourceManager
                         callback?.Invoke(result.PrimaryKey, loadCount, totalCount);
                     });
                 }
+            }
+
+            if(label == "Preload")
+            {
+                _isPreload = true;
             }
         };
     }

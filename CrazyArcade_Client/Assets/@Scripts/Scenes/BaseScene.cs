@@ -11,18 +11,31 @@ public abstract class BaseScene : MonoBehaviour
 	{
 		#if UNITY_EDITOR
 		TestMode = true;
-		#else
+#else
 		TestMode = false;
-		#endif
-		Object obj = GameObject.FindObjectOfType(typeof(EventSystem));
-		if (obj == null)
-			Managers.Resource.Instantiate("UI/EventSystem").name = "@EventSystem";
-	}
+#endif
+        Object obj = GameObject.FindObjectOfType(typeof(EventSystem));
+        if (obj == null)
+            Managers.Resource.Instantiate("UI/EventSystem").name = "@EventSystem";
+
+        if (TestMode)
+            SetTestMode();
+    }
 
 	protected virtual void Start() { }
 	
 	protected virtual void Update() { }
 
 	public abstract void Clear();
+	private void SetTestMode()
+	{
+        if (Managers.Resource.IsPreload)
+            return;
 
+        Managers.Resource.LoadAllAsync<GameObject>("Preload", (a, b, c) =>
+        {
+            Debug.Log("Load Complete");
+        });
+
+    }
 }

@@ -12,9 +12,6 @@ namespace GameServer
     {
         public int SessionId { get; set; }
         public GameRoom Room { get; set; }
-        public float PosX { get; set; }
-        public float PosY { get; set; }
-        public float PosZ { get; set; }
 
         public override void OnConnected(EndPoint endPoint)
         {
@@ -23,7 +20,7 @@ namespace GameServer
         }
         public override void OnRecvPacket(ArraySegment<byte> buffer)
         {
-            Console.WriteLine($"OnRecvPacket : {SessionId}>{PosX},{PosY},{PosZ}");
+            Console.WriteLine($"OnRecvPacket : {SessionId}");
             PacketManager.Instance.OnRecvPacket(this, buffer);
         }
 
