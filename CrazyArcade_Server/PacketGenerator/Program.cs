@@ -70,9 +70,9 @@ namespace PacketGenerator
             packetEnums += string.Format(PacketFormat.packetEnumFormat, packetName, ++packetId) + Environment.NewLine + "\t";
             
             if(packetName.StartsWith("S_") || packetName.StartsWith("s_"))
-                clientRegister += string.Format(PacketFormat.managerRegisterFormat, packetName) + Environment.NewLine;
+                clientRegister += string.Format(PacketFormat.managerRegisterFormat, packetName);
             else
-                serverRegister += string.Format(PacketFormat.managerRegisterFormat, packetName) + Environment.NewLine;
+                serverRegister += string.Format(PacketFormat.managerRegisterFormat, packetName);
         }
 
         public static Tuple<string,string,string> ParseList(XmlReader r)

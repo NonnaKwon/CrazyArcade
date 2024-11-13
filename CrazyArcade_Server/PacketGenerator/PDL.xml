@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <PDL>
+	<packet name ="C_EnterLobby">
+	</packet>
+	<packet name ="S_RoomList">
+		<list name ="Room">
+			<int name ="id"/>
+			<string name ="roomName"/>
+			<int name ="map"/>
+			<int name ="playerCount"/>
+			<bool name ="isStart"/>
+		</list>
+	</packet>
 	<packet name ="C_CreateRoom">
 		<int name="roomId"/>
 		<string name="roomName"/>
@@ -7,5 +18,29 @@
 	<packet name="S_CreateRoom">
 		<int name="roomId"/>
 		<string name="roomName"/>
+	</packet>
+	<packet name="C_EnterRoom">
+		<int name="roomId"/>
+	</packet>
+	<packet name="S_EnterPlyer">
+		<int name="roomId"/>
+		<string name="playerId"/>
+	</packet>
+	<packet name="S_PlayerList">
+		<list name ="player">
+			<string name ="id"/>
+			<string name ="nickname"/>
+			<bool name ="isReady"/>
+			<int name ="character"/>
+		</list>
+		<int name="roomId"/>
+		<string name="roomName"/>
+	</packet>
+	<packet name="C_LeaveRoom">
+		<int name="roomId"/>
+	</packet>
+	<packet name="S_LeavePlyer">
+		<int name="roomId"/>
+		<string name="playerId"/>
 	</packet>
 </PDL>

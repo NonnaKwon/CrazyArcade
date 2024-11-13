@@ -20,9 +20,14 @@ public class PacketManager
     public void Register()
     {
         
+        _makeFunc.Add((ushort)PacketID.C_EnterLobby, MakePacket<C_EnterLobby>);
+        _handler.Add((ushort)PacketID.C_EnterLobby, PacketHandler.C_EnterLobbyHandler);
         _makeFunc.Add((ushort)PacketID.C_CreateRoom, MakePacket<C_CreateRoom>);
         _handler.Add((ushort)PacketID.C_CreateRoom, PacketHandler.C_CreateRoomHandler);
-
+        _makeFunc.Add((ushort)PacketID.C_EnterRoom, MakePacket<C_EnterRoom>);
+        _handler.Add((ushort)PacketID.C_EnterRoom, PacketHandler.C_EnterRoomHandler);
+        _makeFunc.Add((ushort)PacketID.C_LeaveRoom, MakePacket<C_LeaveRoom>);
+        _handler.Add((ushort)PacketID.C_LeaveRoom, PacketHandler.C_LeaveRoomHandler);
     }
 
     public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer,Action<PacketSession,IPacket> onRecvCallback = null)

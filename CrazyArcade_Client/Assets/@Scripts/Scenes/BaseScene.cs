@@ -37,5 +37,6 @@ public abstract class BaseScene : MonoBehaviour
             Debug.Log("Load Complete");
         });
 
+        Managers.Network.Init();
     }
 }

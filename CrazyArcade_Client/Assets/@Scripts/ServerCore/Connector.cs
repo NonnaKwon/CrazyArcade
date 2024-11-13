@@ -32,7 +32,6 @@ namespace ServerCore
             if (socket == null)
                 return;
 
-            Debug.Log($"RegisterConnect..");
             bool pending = socket.ConnectAsync(args);
             if (pending == false)
                 OnConnectCompleted(null, args);
@@ -46,6 +45,10 @@ namespace ServerCore
                 Session session = _sessionFactory.Invoke();
                 session.Start(args.ConnectSocket);
                 session.OnConnected(args.RemoteEndPoint);
+            }
+            else
+            {
+                Debug.Log("Fail connect");
             }
         }
     }

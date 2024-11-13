@@ -414,12 +414,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 20
   m_fontSizeBase: 15
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 20
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -852,7 +852,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2346080602437453277, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_Name
-      value: UI_RoomToken (5)
+      value: UI_RoomToken
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611068433383894180, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
+      propertyPath: m_fontSize
+      value: 18.45
       objectReference: {fileID: 0}
     - target: {fileID: 3662118782177534196, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -938,9 +942,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5447991011874717008, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
+      propertyPath: m_fontSize
+      value: 18.45
+      objectReference: {fileID: 0}
     - target: {fileID: 8397789793608365822, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.29999542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399574557817517446, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
+      propertyPath: m_fontSize
+      value: 18.45
       objectReference: {fileID: 0}
     - target: {fileID: 8768918984227905156, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -971,7 +983,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2346080602437453277, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_Name
-      value: UI_RoomToken (4)
+      value: UI_RoomToken
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611068433383894180, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
+      propertyPath: m_fontSize
+      value: 18.45
       objectReference: {fileID: 0}
     - target: {fileID: 3662118782177534196, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1057,9 +1073,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5447991011874717008, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
+      propertyPath: m_fontSize
+      value: 18.45
+      objectReference: {fileID: 0}
     - target: {fileID: 8397789793608365822, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.29999542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399574557817517446, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
+      propertyPath: m_fontSize
+      value: 18.45
       objectReference: {fileID: 0}
     - target: {fileID: 8768918984227905156, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -1090,7 +1114,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2346080602437453277, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_Name
-      value: UI_RoomToken (1)
+      value: UI_RoomToken
       objectReference: {fileID: 0}
     - target: {fileID: 3662118782177534196, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1209,7 +1233,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2346080602437453277, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_Name
-      value: UI_RoomToken (3)
+      value: UI_RoomToken
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611068433383894180, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
+      propertyPath: m_fontSize
+      value: 18.45
       objectReference: {fileID: 0}
     - target: {fileID: 3662118782177534196, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1295,9 +1323,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5447991011874717008, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
+      propertyPath: m_fontSize
+      value: 18.45
+      objectReference: {fileID: 0}
     - target: {fileID: 8397789793608365822, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.2999916
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399574557817517446, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
+      propertyPath: m_fontSize
+      value: 18.45
       objectReference: {fileID: 0}
     - target: {fileID: 8768918984227905156, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -1328,7 +1364,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2346080602437453277, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_Name
-      value: UI_RoomToken (2)
+      value: UI_RoomToken
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611068433383894180, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
+      propertyPath: m_fontSize
+      value: 18.45
       objectReference: {fileID: 0}
     - target: {fileID: 3662118782177534196, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1414,9 +1454,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5447991011874717008, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
+      propertyPath: m_fontSize
+      value: 18.45
+      objectReference: {fileID: 0}
     - target: {fileID: 8397789793608365822, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.2999916
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399574557817517446, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
+      propertyPath: m_fontSize
+      value: 18.45
       objectReference: {fileID: 0}
     - target: {fileID: 8768918984227905156, guid: b90f8db49f14ad048bc11e00bfd752f4, type: 3}
       propertyPath: m_PresetInfoIsWorld

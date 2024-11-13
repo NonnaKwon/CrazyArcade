@@ -18,10 +18,29 @@ public class ServerInstance
         return _session.IsConnected();
     }
 
+    public void Update()
+    {
+        if (_session == null)
+            return;
+
+    }
+
+    public void Send(IPacket packet)
+    {
+        if (_session != null)
+            _session.Send(packet);
+    }
     public void Connect(IPEndPoint endPoint)
     {
         _session = new ServerSession();
         _connector.Connect(endPoint, () => { return _session; });
+    }
+
+    public void Disconnect()
+    {
+        if(_session != null)
+            _session.Disconnect();
+        _session = null;
     }
 }
 
@@ -43,6 +62,11 @@ public class NetworkManager
 
     public void Update()
     {
+        GameServer.Update();
+    }
 
+    public void Send(IPacket packet)
+    {
+        GameServer.Send(packet);
     }
 }

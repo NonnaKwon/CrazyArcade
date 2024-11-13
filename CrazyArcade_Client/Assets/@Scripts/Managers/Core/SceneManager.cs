@@ -5,7 +5,7 @@ using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using static Define;
 
-public class SceneManagerEx
+public class SceneManager
 {
     public BaseScene CurrentScene { get { return GameObject.FindObjectOfType<BaseScene>(); } }
     public EScene NextSceneType;

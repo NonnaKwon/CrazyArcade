@@ -82,6 +82,20 @@ namespace ServerCore
             RegisterRecv();
         }
 
+        public void Send(IPacket packet)
+        {
+            Send(packet.Write());
+        }
+
+        public void Send(ArraySegment<byte> sendBuff)
+        {
+            lock (_lock)
+            {
+                _sendQueue.Enqueue(sendBuff);
+                if (_pendingList.Count == 0) //내가 1빠다!
+                    RegisterSend();
+            }
+        }
 
         public void Send(List<ArraySegment<byte>> sendBuffList)
         {
@@ -93,16 +107,6 @@ namespace ServerCore
                 foreach(ArraySegment<byte> sendBuff in sendBuffList)
                     _sendQueue.Enqueue(sendBuff);
 
-                if (_pendingList.Count == 0) //내가 1빠다!
-                    RegisterSend();
-            }
-        }
-
-        public void Send(ArraySegment<byte> sendBuff)
-        {
-            lock(_lock)
-            {
-                _sendQueue.Enqueue(sendBuff);
                 if (_pendingList.Count == 0) //내가 1빠다!
                     RegisterSend();
             }

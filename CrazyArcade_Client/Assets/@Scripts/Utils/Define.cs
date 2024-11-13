@@ -1,5 +1,7 @@
 public class Define
 {
+
+    public const int MAX_PLAYER = 8;
     public enum EEventType
     {
 
@@ -9,6 +11,8 @@ public class Define
     {
         Unknown,
         TitleScene,
+        LobbyScene,
+        GameRoomScene,
         LoadingScene,
         GameScene,
     }

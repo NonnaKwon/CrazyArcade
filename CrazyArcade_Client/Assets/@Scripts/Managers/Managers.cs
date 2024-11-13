@@ -21,7 +21,7 @@ public class Managers : MonoBehaviour
     private DataManager _data = new DataManager();
     private PoolManager _pool = new PoolManager();
     private ResourceManager _resource = new ResourceManager();
-    private SceneManagerEx _scene = new SceneManagerEx();
+    private SceneManager _scene = new SceneManager();
     private SoundManager _sound = new SoundManager();
     private UIManager _ui = new UIManager();
     private NetworkManager _network = new NetworkManager();
@@ -29,7 +29,7 @@ public class Managers : MonoBehaviour
     public static DataManager Data { get { return Instance?._data; } }
     public static PoolManager Pool { get { return Instance?._pool; } }
     public static ResourceManager Resource { get { return Instance?._resource; } }
-    public static SceneManagerEx Scene { get { return Instance?._scene; } }
+    public static SceneManager Scene { get { return Instance?._scene; } }
     public static SoundManager Sound { get { return Instance?._sound; } }
     public static UIManager UI { get { return Instance?._ui; } }
     public static NetworkManager Network { get { return Instance?._network; } }
@@ -103,7 +103,6 @@ public class Managers : MonoBehaviour
             DontDestroyOnLoad(go);
             s_instance = go.GetComponent<Managers>();
             s_instance._sound.Init();
-            s_instance._network.Init();
         }		
 	}
     private void Update()
