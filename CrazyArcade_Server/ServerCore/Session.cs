@@ -79,6 +79,7 @@ namespace ServerCore
         }
 
 
+
         public void Send(List<ArraySegment<byte>> sendBuffList)
         {
             if (sendBuffList.Count == 0)

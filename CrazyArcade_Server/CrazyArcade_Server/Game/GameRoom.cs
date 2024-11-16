@@ -8,11 +8,11 @@ using ServerCore;
 
 namespace CrazyArcade_Server.Game
 {
-    class GameRoom : IJobQueue
+    partial class GameRoom : IJobQueue
     {
-        List<ClientSession> _sessions = new List<ClientSession>();
-        JobQueue _jobQueue = new JobQueue();
-        List<ArraySegment<byte>> _pendingList = new List<ArraySegment<byte>>();
+        private List<ClientSession> _sessions = new List<ClientSession>();
+        private JobQueue _jobQueue = new JobQueue();
+        private List<ArraySegment<byte>> _pendingList = new List<ArraySegment<byte>>();
 
 
         public void Push(Action job)
