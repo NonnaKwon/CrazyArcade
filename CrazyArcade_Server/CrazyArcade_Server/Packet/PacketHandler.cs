@@ -10,8 +10,7 @@ class PacketHandler
 {
     public static void C_EnterLobbyHandler(PacketSession session, IPacket packet)
     {
-        S_RoomList roomListPkt = new S_RoomList();
-        // 방 리스트를 보낸다.
+        Program.Lobby.SendRoomList(session);
     }
 
     public static void C_CreateRoomHandler(PacketSession session, IPacket packet)

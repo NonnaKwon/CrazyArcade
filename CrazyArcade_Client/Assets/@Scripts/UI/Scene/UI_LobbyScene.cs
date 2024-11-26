@@ -35,7 +35,7 @@ public class UI_LobbyScene : UI_Scene
         base.Start();
     }
 
-    private void SetRoomList()
+    public void SetRoomList(List<GameRoom> list)
     {
 
     }

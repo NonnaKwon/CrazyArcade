@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class LobbyScene : BaseScene
 {
-    public List<GameRoom> GameRooms { set { _gameRooms = value; UpdateRoomListUI(); } }
+    public List<GameRoom> GameRooms { set { _gameRooms = value; UpdateRoomList(); } }
     private List<GameRoom> _gameRooms;
+    private UI_LobbyScene _ui;
 
     protected override void Awake()
     {
@@ -16,17 +17,24 @@ public class LobbyScene : BaseScene
     protected override void Start()
     {
         base.Start();
-        if(!TestMode)
-            Managers.UI.ShowSceneUI<UI_LobbyScene>();
+        if (!TestMode)
+            _ui = Managers.UI.ShowSceneUI<UI_LobbyScene>();
+        else
+        {
+            _ui = FindObjectOfType<UI_LobbyScene>();
+            Managers.UI.SceneUI = _ui;
+        }
 
         // 로비에 입장했다는 패킷을 보낸다.
         C_EnterLobby enterPacket = new C_EnterLobby();
         Managers.Network.Send(enterPacket);
     }
 
-    public void UpdateRoomListUI()
+
+    public void UpdateRoomList()
     {
 
+        _ui.SetRoomList(_gameRooms);
     }
 
     public override void Clear()

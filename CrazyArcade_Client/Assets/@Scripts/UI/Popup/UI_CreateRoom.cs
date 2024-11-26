@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class UI_CreateRoom : UI_Popup
 {
+    private int _roomNum = 0;
     enum Buttons
     {
         CreateButton,
@@ -36,10 +37,21 @@ public class UI_CreateRoom : UI_Popup
 
     public void ConfirmCreateRoom()
     {
-        //TODO : 방을 만들었다는 패킷을 보낸다.
+        TMP_Dropdown dropdown = GetObject((int)GameObjects.MaxPlayerInput).GetComponent<TMP_Dropdown>();
+        string roomName = GetObject((int)GameObjects.RoomNameInput).GetComponent<TMP_InputField>().text;
+        int maxPlayer = int.Parse(dropdown.options[dropdown.value].text);
 
-        //TODO : 답변이 오면 (S_CreateRoom) 방을 만들고 방에 입장한다. (씬 이동)
-        //TODO : 로비에 들어가 있는 아이들한테만 방이 만들어졌다는 패킷을 쏴야한다.
+        //방을 만들었다는 패킷을 보낸다.
+        C_CreateRoom packet = new C_CreateRoom();
+        packet.roomId = ++_roomNum;
+        packet.roomName = roomName;
+        packet.maxPlayer = maxPlayer;
+
+        Managers.Network.Send(packet);
+
+        //TODO : 방 만드는중,, 이라는 팝업이 뜬다.
+
+        
     }
 
     private void SetOptions()

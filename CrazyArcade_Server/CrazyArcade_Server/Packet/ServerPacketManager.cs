@@ -19,6 +19,7 @@ public class PacketManager
 
     public void Register()
     {
+        
         _makeFunc.Add((ushort)PacketID.C_EnterLobby, MakePacket<C_EnterLobby>);
         _handler.Add((ushort)PacketID.C_EnterLobby, PacketHandler.C_EnterLobbyHandler);
         _makeFunc.Add((ushort)PacketID.C_CreateRoom, MakePacket<C_CreateRoom>);

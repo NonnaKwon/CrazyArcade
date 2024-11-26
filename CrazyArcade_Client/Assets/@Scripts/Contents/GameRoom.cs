@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static S_RoomList;
 
-public class GameRoom : MonoBehaviour
+public class GameRoom
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private int _id;
+    private string _roomName;
+    private int _map;
+    private int _playerCount;
+    private bool _isStart;
 
-    // Update is called once per frame
-    void Update()
+    public GameRoom() { }
+    public GameRoom(int id,string roomName,int map,int count,bool isStart)
     {
-        
+        _id = id;
+        _roomName = roomName;
+        _map = map;
+        _playerCount = count;
+        _isStart = isStart;
     }
 }

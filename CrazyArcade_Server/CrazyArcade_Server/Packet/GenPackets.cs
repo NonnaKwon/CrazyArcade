@@ -154,6 +154,7 @@ public class C_CreateRoom : IPacket
 {
     public int roomId;
 	public string roomName;
+	public int maxPlayer;
 
 	public ushort Protocol { get { return (ushort)PacketID.C_CreateRoom; } }
 
@@ -169,6 +170,8 @@ public class C_CreateRoom : IPacket
 		count += sizeof(ushort);
 		this.roomName = Encoding.Unicode.GetString(segment.Array, segment.Offset + count,roomNameLen);
 		count += roomNameLen;
+		this.maxPlayer = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
     }
 
     public ArraySegment<byte> Write()
@@ -188,6 +191,8 @@ public class C_CreateRoom : IPacket
 		Array.Copy(BitConverter.GetBytes(roomNameLen), 0, segment.Array, segment.Offset + count, sizeof(ushort));
 		count += sizeof(ushort);
 		count += roomNameLen;
+		Array.Copy(BitConverter.GetBytes(this.maxPlayer), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
         Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset + count, sizeof(ushort));
 
         return SendBufferHelper.Close(count);
