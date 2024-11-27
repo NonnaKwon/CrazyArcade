@@ -53,7 +53,7 @@ public class C_EnterLobby : IPacket
         count += sizeof(ushort);
 
         
-        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
 
         return SendBufferHelper.Close(count);
 
@@ -143,7 +143,7 @@ public class S_RoomList : IPacket
 		count += sizeof(ushort);
 		foreach(Room room in this.rooms)
 		    room.Write(segment, ref count);
-        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
 
         return SendBufferHelper.Close(count);
 
@@ -188,7 +188,7 @@ public class C_CreateRoom : IPacket
 		count += roomNameLen;
 		Array.Copy(BitConverter.GetBytes(this.maxPlayer), 0, segment.Array, segment.Offset + count, sizeof(int));
 		count += sizeof(int);
-        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
 
         return SendBufferHelper.Close(count);
 
@@ -233,7 +233,7 @@ public class S_CreateRoom : IPacket
 		count += roomNameLen;
 		Array.Copy(BitConverter.GetBytes(this.maxPlayer), 0, segment.Array, segment.Offset + count, sizeof(int));
 		count += sizeof(int);
-        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
 
         return SendBufferHelper.Close(count);
 
@@ -269,7 +269,7 @@ public class C_EnterRoom : IPacket
 
         Array.Copy(BitConverter.GetBytes(this.roomId), 0, segment.Array, segment.Offset + count, sizeof(int));
 		count += sizeof(int);
-        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
 
         return SendBufferHelper.Close(count);
 
@@ -314,7 +314,7 @@ public class S_EnterPlyer : IPacket
 		Array.Copy(BitConverter.GetBytes(playerIdLen), 0, segment.Array, segment.Offset + count, sizeof(ushort));
 		count += sizeof(ushort);
 		count += playerIdLen;
-        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
 
         return SendBufferHelper.Close(count);
 
@@ -417,7 +417,7 @@ public class S_PlayerList : IPacket
 		Array.Copy(BitConverter.GetBytes(roomNameLen), 0, segment.Array, segment.Offset + count, sizeof(ushort));
 		count += sizeof(ushort);
 		count += roomNameLen;
-        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
 
         return SendBufferHelper.Close(count);
 
@@ -453,7 +453,7 @@ public class C_LeaveRoom : IPacket
 
         Array.Copy(BitConverter.GetBytes(this.roomId), 0, segment.Array, segment.Offset + count, sizeof(int));
 		count += sizeof(int);
-        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
 
         return SendBufferHelper.Close(count);
 
@@ -498,7 +498,7 @@ public class S_LeavePlyer : IPacket
 		Array.Copy(BitConverter.GetBytes(playerIdLen), 0, segment.Array, segment.Offset + count, sizeof(ushort));
 		count += sizeof(ushort);
 		count += playerIdLen;
-        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
 
         return SendBufferHelper.Close(count);
 

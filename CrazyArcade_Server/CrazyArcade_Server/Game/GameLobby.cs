@@ -58,6 +58,7 @@ namespace CrazyArcade_Server.Game
             sendPacket.roomName = gameRoom.RoomName;
             sendPacket.maxPlayer = gameRoom.MaxPlayer;
             Broadcast(sendPacket.Write());
+            Console.WriteLine(sendPacket.ToString());
         }
 
         public void SendRoomList(PacketSession session)

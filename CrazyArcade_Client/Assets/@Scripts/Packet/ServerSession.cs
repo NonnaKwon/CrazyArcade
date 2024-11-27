@@ -9,7 +9,7 @@ public class ServerSession : PacketSession
 {
     public override void OnConnected(EndPoint endPoint)
     {
-        Debug.Log($"OnConnected");
+        Debug.LogError($"OnConnected");
     }
 
     public override void OnDisconnected(EndPoint endPoint)

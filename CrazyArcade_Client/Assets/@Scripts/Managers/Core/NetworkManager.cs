@@ -30,6 +30,7 @@ public class ServerInstance
     {
         if (_session != null)
             _session.Send(packet);
+        Debug.Log(packet.ToString());
     }
 
     public void Connect(IPEndPoint endPoint)

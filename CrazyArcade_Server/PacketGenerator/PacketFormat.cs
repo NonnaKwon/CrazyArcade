@@ -138,7 +138,7 @@ public class {0} : IPacket
         count += sizeof(ushort);
 
         {3}
-        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
 
         return SendBufferHelper.Close(count);
 

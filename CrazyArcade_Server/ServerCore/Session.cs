@@ -194,7 +194,7 @@ namespace ServerCore
 
         void OnRecvCompleted(object sender,SocketAsyncEventArgs args)
         {
-            if (args.SocketError == SocketError.Success)
+            if (args.BytesTransferred > 0 && args.SocketError == SocketError.Success)
             {
                 //TODO
                 try
