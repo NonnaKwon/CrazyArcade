@@ -22,23 +22,32 @@ public class UI_RoomToken : UI_Base
         EnterButton
     }
 
+    private GameRoom _roomInfo;
+
     protected override void Awake()
     {
         base.Awake();
         BindTexts(typeof(Texts));
         BindImages(typeof(Images));
         BindObjects(typeof(GameObjects));
+        OffActive();
+    }
+
+    public void SetInfo(GameRoom room)
+    {
+        _roomInfo = room;
+
+        OnActive();
+    }
+
+    private void OnActive()
+    {
+        gameObject.SetActive(true);
+    }
+
+    private void OffActive()
+    {
         gameObject.SetActive(false);
-    }
-
-    public void OnActive()
-    {
-
-    }
-
-    public void OffActive()
-    {
-
     }
 
 }

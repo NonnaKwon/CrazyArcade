@@ -17,7 +17,7 @@ namespace GameServer
 
         public override void OnRecvPacket(ArraySegment<byte> buffer)
         {
-            Console.WriteLine($"OnRecvPacket : {SessionId}");
+            Console.WriteLine($"OnRecvPacket : {SessionId} / {(PacketID)BitConverter.ToUInt16(buffer.Array,buffer.Offset+2)}");
             PacketManager.Instance.OnRecvPacket(this, buffer);
         }
 

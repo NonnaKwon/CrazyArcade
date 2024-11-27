@@ -37,8 +37,8 @@ public class Managers : MonoBehaviour
     #endregion
 
     #region Language
-    private static Define.ELanguage _language = Define.ELanguage.Korean;
-    public static Define.ELanguage Language
+    private static Define.Language _language = Define.Language.Korean;
+    public static Define.Language Language
     {
         get { return _language; }
         set
@@ -51,34 +51,34 @@ public class Managers : MonoBehaviour
     {
         switch (_language)
         {
-            case Define.ELanguage.Korean:
+            case Define.Language.Korean:
                 break;
-            case Define.ELanguage.English:
+            case Define.Language.English:
                 break;
-            case Define.ELanguage.French:
+            case Define.Language.French:
                 break;
-            case Define.ELanguage.SimplifiedChinese:
+            case Define.Language.SimplifiedChinese:
                 break;
-            case Define.ELanguage.TraditionalChinese:
+            case Define.Language.TraditionalChinese:
                 break;
-            case Define.ELanguage.Japanese:
+            case Define.Language.Japanese:
                 break;
         }
 
         return textId;
     }
     
-    public static string GetErrorMsg(Define.EErrorMessage msg)
+    public static string GetErrorMsg(Define.ErrorMessage msg)
     {
         switch (msg)
         {
-            case Define.EErrorMessage.Level:
+            case Define.ErrorMessage.Level:
                 return "TODO 감히 사용 할 수 없습니다.";
-            case Define.EErrorMessage.Class:
+            case Define.ErrorMessage.Class:
                 return "TODO 현재 클래스에서 사용할 수 없습니다.";
-            case Define.EErrorMessage.InventoryFull:
+            case Define.ErrorMessage.InventoryFull:
                 return "TODO 가방이 가득 찼습니다..";
-            case Define.EErrorMessage.Etc:
+            case Define.ErrorMessage.Etc:
                 return "사용할 수 없습니다.";
         }
 
@@ -116,5 +116,10 @@ public class Managers : MonoBehaviour
         Scene.Clear();
         UI.Clear();
         Pool.Clear();
+    }
+
+    private void OnApplicationQuit()
+    {
+        _network.DisConnect();
     }
 }

@@ -11,12 +11,13 @@ public class LobbyScene : BaseScene
     protected override void Awake()
     {
         base.Awake();
-        SceneType = Define.EScene.LobbyScene;
+        SceneType = Define.Scene.LobbyScene;
     }
 
     protected override void Start()
     {
         base.Start();
+
         if (!TestMode)
             _ui = Managers.UI.ShowSceneUI<UI_LobbyScene>();
         else
@@ -33,7 +34,11 @@ public class LobbyScene : BaseScene
 
     public void UpdateRoomList()
     {
-
+        if (_ui == null)
+        {
+            Debug.Log("UpdateRoomList() : not found UI");
+            return;
+        }
         _ui.SetRoomList(_gameRooms);
     }
 

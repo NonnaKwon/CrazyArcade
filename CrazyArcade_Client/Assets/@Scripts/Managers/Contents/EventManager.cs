@@ -4,9 +4,9 @@ using static Define;
 
 public class EventManager
 {
-	private Dictionary<EEventType, Action> _events = new Dictionary<EEventType, Action>();
+	private Dictionary<EventType, Action> _events = new Dictionary<EventType, Action>();
 
-	public void AddEvent(EEventType eventType, Action listener)
+	public void AddEvent(EventType eventType, Action listener)
 	{
 		if (_events.ContainsKey(eventType) == false)
 			_events.Add(eventType, new Action(() => { }));
@@ -14,13 +14,13 @@ public class EventManager
 		_events[eventType] += listener;
 	}
 
-	public void RemoveEvent(EEventType eventType, Action listener)
+	public void RemoveEvent(EventType eventType, Action listener)
 	{
         if (_events.ContainsKey(eventType))
 			_events[eventType] -= listener;
 	}
 
-	public void TriggerEvent(EEventType eventType)
+	public void TriggerEvent(EventType eventType)
 	{
 		if (_events.ContainsKey(eventType))
 			_events[eventType].Invoke();

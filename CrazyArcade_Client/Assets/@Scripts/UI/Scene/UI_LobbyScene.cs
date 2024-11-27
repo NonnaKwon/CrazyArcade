@@ -18,7 +18,7 @@ public class UI_LobbyScene : UI_Scene
     }
 
     private UI_RoomToken[] _uiList;
-
+    private const int MAX_TOKEN = 6; // 한 페이지에 방 수
 
     protected override void Awake()
     {
@@ -35,9 +35,17 @@ public class UI_LobbyScene : UI_Scene
         base.Start();
     }
 
-    public void SetRoomList(List<GameRoom> list)
+    public void SetRoomList(List<GameRoom> list, int page = 0)
     {
+        for (int i= 0; i < list.Count; i++)
+        {
+            if (i >= MAX_TOKEN)
+                break;
 
+            _uiList[i].SetInfo(list[i]);
+        }
+
+        //TODO : 페이징 기능
     }
 
     public void OnCreateRoom()

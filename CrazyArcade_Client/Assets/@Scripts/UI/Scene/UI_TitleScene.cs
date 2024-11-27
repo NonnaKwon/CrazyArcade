@@ -18,6 +18,6 @@ public class UI_TitleScene : UI_Scene
 
     public void Login()
     {
-        Managers.Scene.LoadScene(Define.EScene.TitleScene);
+        Managers.Scene.LoadScene(Define.Scene.TitleScene);
     }
 }

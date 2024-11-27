@@ -64,41 +64,41 @@ public abstract class UI_Base : MonoBehaviour
         return ret;
     }
     
-    public static void BindEvent(GameObject go, Action<PointerEventData> action = null, Define.ETouchEvent type = Define.ETouchEvent.Click)
+    public static void BindEvent(GameObject go, Action<PointerEventData> action = null, Define.TouchEvent type = Define.TouchEvent.Click)
     {
         UI_EventHandler evt = Utils.GetOrAddComponent<UI_EventHandler>(go);
 
         switch (type)
         {
-            case Define.ETouchEvent.Click:
+            case Define.TouchEvent.Click:
                 evt.OnClickHandler -= action;
                 evt.OnClickHandler += action;
                 break;
-            case Define.ETouchEvent.PointerDown:
+            case Define.TouchEvent.PointerDown:
                 evt.OnPointerDownHandler -= action;
                 evt.OnPointerDownHandler += action;
                 break;
-            case Define.ETouchEvent.PointerUp:
+            case Define.TouchEvent.PointerUp:
                 evt.OnPointerUpHandler -= action;
                 evt.OnPointerUpHandler += action;
                 break;
-            case Define.ETouchEvent.Drag:
+            case Define.TouchEvent.Drag:
                 evt.OnDragHandler -= action;
                 evt.OnDragHandler += action;
                 break;
-            case Define.ETouchEvent.BeginDrag:
+            case Define.TouchEvent.BeginDrag:
                 evt.OnBeginDragHandler -= action;
                 evt.OnBeginDragHandler += action;
                 break;
-            case Define.ETouchEvent.EndDrag:
+            case Define.TouchEvent.EndDrag:
                 evt.OnEndDragHandler -= action;
                 evt.OnEndDragHandler += action;
                 break;
-            case Define.ETouchEvent.LongPressed:
+            case Define.TouchEvent.LongPressed:
                 evt.OnLongPressHandler -= action;
                 evt.OnLongPressHandler += action;
                 break;
-            case Define.ETouchEvent.Enter:
+            case Define.TouchEvent.Enter:
                 evt.OnEnterHandler -= action;
                 evt.OnEnterHandler += action;
                 break;

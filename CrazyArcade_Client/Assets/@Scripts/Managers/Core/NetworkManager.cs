@@ -2,6 +2,7 @@ using ServerCore;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -30,6 +31,7 @@ public class ServerInstance
         if (_session != null)
             _session.Send(packet);
     }
+
     public void Connect(IPEndPoint endPoint)
     {
         _session = new ServerSession();
@@ -69,4 +71,10 @@ public class NetworkManager
     {
         GameServer.Send(packet);
     }
+
+    public void DisConnect()
+    {
+        GameServer.Disconnect();
+    }
+
 }

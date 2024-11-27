@@ -8,7 +8,7 @@ using ServerCore;
 
 namespace CrazyArcade_Server.Game
 {
-    partial class GameRoom : IJobQueue
+    public partial class GameRoom : IJobQueue
     {
         private List<ClientSession> _sessions = new List<ClientSession>();
         private JobQueue _jobQueue = new JobQueue();

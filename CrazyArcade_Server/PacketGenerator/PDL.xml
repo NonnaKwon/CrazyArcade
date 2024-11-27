@@ -12,13 +12,12 @@
 		</list>
 	</packet>
 	<packet name ="C_CreateRoom">
-		<int name="roomId"/>
 		<string name="roomName"/>
 		<int name="maxPlayer"/>
 	</packet>
 	<packet name="S_CreateRoom">
-		<int name="roomId"/>
 		<string name="roomName"/>
+		<int name="maxPlayer"/>
 	</packet>
 	<packet name="C_EnterRoom">
 		<int name="roomId"/>

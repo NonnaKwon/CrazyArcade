@@ -8,18 +8,18 @@ using static Define;
 public class SceneManager
 {
     public BaseScene CurrentScene { get { return GameObject.FindObjectOfType<BaseScene>(); } }
-    public EScene NextSceneType;
+    public Define.Scene NextSceneType;
 
-    public void LoadScene(EScene type, Transform parents = null)
+    public void LoadScene(Define.Scene type, Transform parents = null)
     {
         NextSceneType = type;
         Managers.Clear();
         Addressables.LoadSceneAsync(GetSceneName(type), LoadSceneMode.Single, true);
     }
 
-    public string GetSceneName(EScene type)
+    public string GetSceneName(Define.Scene type)
     {
-        string name = System.Enum.GetName(typeof(EScene), type);
+        string name = System.Enum.GetName(typeof(Define.Scene), type);
         return name;
     }
 

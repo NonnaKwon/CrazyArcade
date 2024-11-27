@@ -49,9 +49,15 @@ namespace CrazyArcade_Server.Game
 
         }
 
-        public void CreateRoom(C_CreateRoom packet)
+        public void CreateRoom(GameRoom gameRoom)
         {
+            _gameRooms.Add(gameRoom);
 
+            // 로비에 있는 유저들에게 방이 만들어졌다고 알린다.
+            S_CreateRoom sendPacket = new S_CreateRoom();
+            sendPacket.roomName = gameRoom.RoomName;
+            sendPacket.maxPlayer = gameRoom.MaxPlayer;
+            Broadcast(sendPacket.Write());
         }
 
         public void SendRoomList(PacketSession session)

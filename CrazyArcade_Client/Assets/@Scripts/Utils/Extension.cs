@@ -11,7 +11,7 @@ public static class Extension
         return Utils.GetOrAddComponent<T>(go);
     }
 
-    public static void BindEvent(this GameObject go, Action<PointerEventData> action = null, Define.ETouchEvent type = Define.ETouchEvent.Click)
+    public static void BindEvent(this GameObject go, Action<PointerEventData> action = null, Define.TouchEvent type = Define.TouchEvent.Click)
     {
         UI_Base.BindEvent(go, action, type);
     }

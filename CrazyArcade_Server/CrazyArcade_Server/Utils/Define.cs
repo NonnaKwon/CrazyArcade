@@ -1,4 +1,4 @@
-public class Define
+﻿public class Define
 {
 
     public const int MAX_PLAYER = 8;

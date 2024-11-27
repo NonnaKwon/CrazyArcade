@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class UI_CreateRoom : UI_Popup
 {
-    private int _roomNum = 0;
     enum Buttons
     {
         CreateButton,
@@ -43,7 +42,6 @@ public class UI_CreateRoom : UI_Popup
 
         //방을 만들었다는 패킷을 보낸다.
         C_CreateRoom packet = new C_CreateRoom();
-        packet.roomId = ++_roomNum;
         packet.roomName = roomName;
         packet.maxPlayer = maxPlayer;
 

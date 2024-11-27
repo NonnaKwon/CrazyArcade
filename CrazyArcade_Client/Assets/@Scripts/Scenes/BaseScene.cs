@@ -5,7 +5,7 @@ public abstract class BaseScene : MonoBehaviour
 {
 	public bool TestMode = true;
 
-    public Define.EScene SceneType { get; protected set; } = Define.EScene.Unknown;
+    public Define.Scene SceneType { get; protected set; } = Define.Scene.Unknown;
 
     protected virtual void Awake()
 	{
