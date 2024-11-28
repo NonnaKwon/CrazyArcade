@@ -49,7 +49,7 @@ public class UI_CreateRoom : UI_Popup
 
         //TODO : 방 만드는중,, 이라는 팝업이 뜬다.
 
-        
+        //TODO : 서버에서 방이 만들어졌다는 신호가 오면, 방에 들어간다.
     }
 
     private void SetOptions()

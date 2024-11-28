@@ -44,9 +44,7 @@ namespace CrazyArcade_Server.Game
 
         public void Leave(ClientSession session)
         {
-            //플레이어 제거하고
             _sessions.Remove(session);
-
         }
 
         public void CreateRoom(GameRoom gameRoom)
@@ -58,7 +56,6 @@ namespace CrazyArcade_Server.Game
             sendPacket.roomName = gameRoom.RoomName;
             sendPacket.maxPlayer = gameRoom.MaxPlayer;
             Broadcast(sendPacket.Write());
-            Console.WriteLine(sendPacket.ToString());
         }
 
         public void SendRoomList(PacketSession session)
@@ -73,7 +70,7 @@ namespace CrazyArcade_Server.Game
                 {
                     id = room.Id,
                     roomName = room.RoomName,
-                    map = room.Map,
+                    map = (int)room.Map,
                     playerCount = room.PlayerCount,
                     isStart = room.IsStart
                 });

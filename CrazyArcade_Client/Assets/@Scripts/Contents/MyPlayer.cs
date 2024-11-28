@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class MyPlayer : Player
 {
-    public void EnterRoom(GameRoom room)
-    {
 
+    public MyPlayer(int id) : base(id)
+    {
+        
     }
+
 }

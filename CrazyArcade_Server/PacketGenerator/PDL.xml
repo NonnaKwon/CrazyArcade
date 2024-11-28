@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <PDL>
+	<packet name ="S_Connect">
+		<int name="id"/>
+		<string name="nickname"/>
+	</packet>
 	<packet name ="C_EnterLobby">
 	</packet>
 	<packet name ="S_RoomList">
@@ -22,25 +26,24 @@
 	<packet name="C_EnterRoom">
 		<int name="roomId"/>
 	</packet>
-	<packet name="S_EnterPlyer">
-		<int name="roomId"/>
-		<string name="playerId"/>
+	<packet name="S_EnterPlayer">
+		<int name="playerId"/>
+		<string name="nickname"/>
 	</packet>
 	<packet name="S_PlayerList">
 		<list name ="player">
-			<string name ="id"/>
+			<int name ="id"/>
 			<string name ="nickname"/>
 			<bool name ="isReady"/>
 			<int name ="character"/>
 		</list>
 		<int name="roomId"/>
-		<string name="roomName"/>
 	</packet>
 	<packet name="C_LeaveRoom">
 		<int name="roomId"/>
 	</packet>
 	<packet name="S_LeavePlyer">
 		<int name="roomId"/>
-		<string name="playerId"/>
+		<int name="playerId"/>
 	</packet>
 </PDL>

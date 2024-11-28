@@ -29,6 +29,9 @@ public class LobbyScene : BaseScene
         // 로비에 입장했다는 패킷을 보낸다.
         C_EnterLobby enterPacket = new C_EnterLobby();
         Managers.Network.Send(enterPacket);
+
+        if (Managers.Game.CurrentRoom != null)
+            Managers.Game.CurrentRoom = null;
     }
 
 
@@ -40,6 +43,28 @@ public class LobbyScene : BaseScene
             return;
         }
         _ui.SetRoomList(_gameRooms);
+    }
+
+    public GameRoom FindRoomById(int roomId)
+    {
+        GameRoom targetRoom = null;
+        for(int i=0;i< _gameRooms.Count;i++)
+        {
+            if (_gameRooms[i].IsEqualId(roomId))
+            {
+                targetRoom = _gameRooms[i];
+                break;
+            }
+        }
+
+        if(targetRoom == null)
+        {
+            // TODO : 방을 찾을 수 없다는 경고문구 띄움.
+            Debug.Log("FindRoomById() : 찾을 수 없음");
+            return null;
+        }
+
+        return targetRoom;
     }
 
     public override void Clear()

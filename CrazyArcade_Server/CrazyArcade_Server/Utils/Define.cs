@@ -7,6 +7,14 @@
 
     }
 
+    public enum Character
+    {
+        Dao,
+        Marid,
+        Bazzi,
+        Cappi
+    }
+
     public enum Scene
     {
         Unknown,

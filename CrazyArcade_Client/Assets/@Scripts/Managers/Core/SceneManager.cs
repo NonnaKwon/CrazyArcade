@@ -7,9 +7,14 @@ using static Define;
 
 public class SceneManager
 {
-    public BaseScene CurrentScene { get { return GameObject.FindObjectOfType<BaseScene>(); } }
+    public BaseScene CurrentScene
+    {
+        get { return _currentScene == null ? GameObject.FindObjectOfType<BaseScene>() : _currentScene; }
+        set { _currentScene = value; }
+    }
     public Define.Scene NextSceneType;
 
+    private BaseScene _currentScene;
     public void LoadScene(Define.Scene type, Transform parents = null)
     {
         NextSceneType = type;
@@ -25,6 +30,7 @@ public class SceneManager
 
     public void Clear()
     {
-        CurrentScene.Clear();
+        _currentScene.Clear();
+        _currentScene = null;
     }
 }

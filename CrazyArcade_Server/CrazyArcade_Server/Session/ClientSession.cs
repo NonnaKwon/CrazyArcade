@@ -4,15 +4,28 @@ using System.Net;
 
 namespace GameServer
 {
-    public partial class ClientSession : PacketSession
+    public class ClientSession : PacketSession
     {
         public int SessionId { get; set; }
-        private GameRoom _cureentRoom;
+        public bool InRoom { get { return _currentRoom != null; } }
+        public Player Player { get { return _player; } }
+        public GameRoom Room { set { _currentRoom = value; } }
+
+        private GameRoom _currentRoom;
+        private Player _player;
 
         public override void OnConnected(EndPoint endPoint)
         {
             Console.WriteLine($"OnConnected : {endPoint}/{SessionId}");
             Program.Lobby.Push(() => Program.Lobby.Enter(this));
+
+            // TODO : 닉네임을 플레이어 정보와 연결해야함.
+            _player = new Player(SessionId);
+
+            S_Connect connect = new S_Connect();
+            connect.id = SessionId;
+            connect.nickname = _player.Nickname;
+            Send(connect.Write());
         }
 
         public override void OnRecvPacket(ArraySegment<byte> buffer)
@@ -26,7 +39,6 @@ namespace GameServer
             SessionManager.Instance.Remove(this);
             Console.WriteLine($"OnDisconnected : {endPoint}");
         }
-
 
         public override void OnSend(int numOfBytes)
         {

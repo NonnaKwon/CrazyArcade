@@ -17,6 +17,7 @@ class PacketHandler
     public static void C_CreateRoomHandler(PacketSession session, IPacket packet)
     {
         C_CreateRoom recvPacket = packet as C_CreateRoom;
+        ClientSession client = session as ClientSession;
 
         if (recvPacket == null)
             return;
@@ -24,8 +25,9 @@ class PacketHandler
         GameRoom gameRoom = new GameRoom();
         gameRoom.RoomName = recvPacket.roomName;
         gameRoom.MaxPlayer = recvPacket.maxPlayer;
-        gameRoom.Enter(session as ClientSession);
+        gameRoom.Enter(client);
 
+        Program.Lobby.Leave(client);
         Program.Lobby.CreateRoom(gameRoom);
     }
     public static void C_EnterRoomHandler(PacketSession session, IPacket packet)

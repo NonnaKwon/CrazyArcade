@@ -7,6 +7,12 @@ using static S_RoomList;
 
 class PacketHandler
 {
+    public static void S_ConnectHandler(PacketSession session, IPacket packet)
+    {
+        S_Connect connectInfo = packet as S_Connect;
+        Managers.Game.ConnectedPlayer(connectInfo);
+    }
+
     public static void S_RoomListHandler(PacketSession session, IPacket packet)
     {
         LobbyScene lobby = Managers.Scene.CurrentScene as LobbyScene;
@@ -30,18 +36,32 @@ class PacketHandler
     
     public static void S_CreateRoomHandler(PacketSession session, IPacket packet)
     {
-        //TODO : 답변이 오면 (S_CreateRoom) 방을 만들고 방에 입장한다. (씬 이동)
         //TODO : 로비에 들어가 있는 아이들한테만 방이 만들어졌다는 패킷을 쏴야한다.
-        Debug.LogError("ss");
+        Debug.LogError("Create Room");
     }
-    public static void S_EnterPlyerHandler(PacketSession session, IPacket packet)
+
+    public static void S_EnterPlayerHandler(PacketSession session, IPacket packet)
     {
 
     }
+
     public static void S_PlayerListHandler(PacketSession session, IPacket packet)
     {
+        LobbyScene lobby = Managers.Scene.CurrentScene as LobbyScene;
+        if (lobby == null)
+        {
+            Debug.LogError("not find lobby");
+            return;
+        }
 
+        // 방에 들어간다.
+        S_PlayerList roomPlayer = packet as S_PlayerList;
+        GameRoom enterRoom = lobby.FindRoomById(roomPlayer.roomId);
+
+        enterRoom.UpdatePlayers(roomPlayer);
+        enterRoom.Enter(Managers.Game.Player);
     }
+
     public static void S_LeavePlyerHandler(PacketSession session, IPacket packet)
     {
 

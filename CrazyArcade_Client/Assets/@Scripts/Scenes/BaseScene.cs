@@ -14,17 +14,18 @@ public abstract class BaseScene : MonoBehaviour
 #else
 		TestMode = true;
 #endif
-        Object obj = GameObject.FindObjectOfType(typeof(EventSystem));
-        if (obj == null)
-            Managers.Resource.Instantiate("UI/EventSystem").name = "@EventSystem";
 
         if (TestMode)
             SetTestMode();
+
     }
 
-	protected virtual void Start() { }
-	
-	protected virtual void Update() { }
+	protected virtual void Start()
+    {
+        Managers.Scene.CurrentScene = this;
+    }
+
+    protected virtual void Update() { }
 
 	public abstract void Clear();
 	private void SetTestMode()
