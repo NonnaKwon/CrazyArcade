@@ -12,7 +12,7 @@ public abstract class BaseScene : MonoBehaviour
 		#if UNITY_EDITOR
 		TestMode = true;
 #else
-		TestMode = false;
+		TestMode = true;
 #endif
         Object obj = GameObject.FindObjectOfType(typeof(EventSystem));
         if (obj == null)

@@ -23,18 +23,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 182bda6cadb4e9740b216b5cf8e4896a
-    m_Address: LobbyScene
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0af89e3746d935b4fa51cb8b0416bc30
-    m_Address: GameScene
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e125f121eb95e5745973ebae5519ee91
     m_Address: GameRoomScene
     m_ReadOnly: 0

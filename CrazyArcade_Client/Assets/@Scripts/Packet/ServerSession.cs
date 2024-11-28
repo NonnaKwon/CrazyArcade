@@ -9,7 +9,7 @@ public class ServerSession : PacketSession
 {
     public override void OnConnected(EndPoint endPoint)
     {
-        Debug.LogError($"OnConnected");
+        Debug.Log($"OnConnected");
     }
 
     public override void OnDisconnected(EndPoint endPoint)
@@ -19,7 +19,8 @@ public class ServerSession : PacketSession
 
     public override void OnRecvPacket(ArraySegment<byte> buffer)
     {
-        Debug.Log($"OnRecvPacket");
+        Debug.Log($"OnRecvPacket : {(PacketID)BitConverter.ToUInt16(buffer.Array, buffer.Offset + 2)}");
+        PacketManager.Instance.OnRecvPacket(this, buffer);
     }
 
     public override void OnSend(int numOfBytes)
