@@ -66,7 +66,7 @@ public class MultiplayersBuildAndRun : MonoBehaviour
             BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
 
         // 해상도 설정
-        PlayerSettings.defaultScreenWidth = 800;
+        PlayerSettings.defaultScreenWidth = 700;
         PlayerSettings.defaultScreenHeight = 600;
         PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
 
@@ -74,20 +74,20 @@ public class MultiplayersBuildAndRun : MonoBehaviour
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
 
-        for (int i = 1; i <= playerCount; i++)
-        {
-            BuildPipeline.BuildPlayer(GetScenePaths(),
-                "Builds/Win64/" + GetProjectName() + i.ToString() + "/" + GetProjectName() + i.ToString() + ".exe",
+        // 비ㄹ
+        BuildPipeline.BuildPlayer(GetScenePaths(),
+                "Builds/Win64/" + GetProjectName() + "/" + GetProjectName() + ".exe",
                 BuildTarget.StandaloneWindows64, BuildOptions.AutoRunPlayer);
-        }
+
+        RunExe(playerCount - 1);
     }
 
     static void RunExe(int playerCount)
     {
         List<Process> _processes = new List<Process>();
+        string exePath = "Builds/Win64/" + GetProjectName() + "/" + GetProjectName() + ".exe";
         for (int i = 1; i <= playerCount; i++)
         {
-            string exePath = "Builds/Win64/" + GetProjectName() + i.ToString() + "/" + GetProjectName() + i.ToString() + ".exe";
             _processes.Add(RunProcess(exePath));
         }
     }

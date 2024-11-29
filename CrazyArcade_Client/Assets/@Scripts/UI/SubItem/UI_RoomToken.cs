@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static S_RoomList;
 
 public class UI_RoomToken : UI_Base
 {
@@ -17,7 +18,7 @@ public class UI_RoomToken : UI_Base
         MapImage,
     }
 
-    enum GameObjects
+    enum Buttons
     {
         EnterButton
     }
@@ -29,13 +30,19 @@ public class UI_RoomToken : UI_Base
         base.Awake();
         BindTexts(typeof(Texts));
         BindImages(typeof(Images));
-        BindObjects(typeof(GameObjects));
+        BindButtons(typeof(Buttons));
+
+        GetButton((int)Buttons.EnterButton);
+    }
+
+    public void EnterRoom()
+    {
+        _roomInfo.TryEnterRoom();
     }
 
     public void SetInfo(GameRoom room)
     {
         _roomInfo = room;
-
         OnActive();
     }
 

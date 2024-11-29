@@ -58,6 +58,11 @@ public class GameRoom
         _playerCount = _players.Count;
     }
 
+    public void Leave()
+    {
+
+    }
+
     public void Enter(Player newPlayer)
     {
         if(newPlayer == Managers.Game.Player)
@@ -68,5 +73,12 @@ public class GameRoom
 
         _players.Add(newPlayer);
         _playerCount++;
+    }
+
+    public void TryEnterRoom()
+    {
+        C_EnterRoom enterPacket = new C_EnterRoom();
+        enterPacket.roomId = _id;
+        Managers.Network.Send(enterPacket);
     }
 }

@@ -41,11 +41,7 @@ class PacketHandler
         lobby.AddRoom(room);
 
         if(Managers.Game.Player.Id == createRoom.masterId)
-        {
-            C_EnterRoom enterPacket = new C_EnterRoom();
-            enterPacket.roomId = createRoom.roomId;
-            Managers.Network.Send(enterPacket);
-        }
+            room.TryEnterRoom();
     }
 
     public static void S_EnterPlayerHandler(PacketSession session, IPacket packet)
