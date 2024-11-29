@@ -9,6 +9,7 @@ namespace PacketGenerator
     internal class PacketFormat
     {
         //{0} 패킷 등록
+        //{1} 패킷 후처리
         public static string managerFormat =
 @"using ServerCore;
 using System;
@@ -50,7 +51,7 @@ public class PacketManager
             if (onRecvCallback != null)
                 onRecvCallback.Invoke(session, packet);
             else
-                HandlePacket(session, packet);
+                {1}
         }}
     }}
 
@@ -68,6 +69,11 @@ public class PacketManager
             action.Invoke(session, packet);
     }}
 }}";
+        public static string managerFormatClient =
+            "PacketQueue.Instance.Push(packet);";
+
+        public static string managerFormatServer =
+            "HandlePacket(session, packet);";
 
         //{0} 패킷 이름
         public static string managerRegisterFormat =
@@ -245,5 +251,6 @@ count += sizeof(ushort);
 foreach({0} {1} in this.{1}s)
     {1}.Write(segment, ref count);";
         #endregion
+
     }
 }

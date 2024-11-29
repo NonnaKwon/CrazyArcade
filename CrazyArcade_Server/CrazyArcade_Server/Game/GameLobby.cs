@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static S_RoomList;
 
 namespace CrazyArcade_Server.Game
 {
@@ -39,7 +40,6 @@ namespace CrazyArcade_Server.Game
         public void Enter(ClientSession session)
         {
             _sessions.Add(session);
-            SendRoomList(session);
         }
 
         public void Leave(ClientSession session)
@@ -47,16 +47,20 @@ namespace CrazyArcade_Server.Game
             _sessions.Remove(session);
         }
 
-        public void CreateRoom(GameRoom gameRoom)
+        public void CreateRoom(GameRoom gameRoom,ClientSession master)
         {
             _gameRooms.Add(gameRoom);
 
             // 로비에 있는 유저들에게 방이 만들어졌다고 알린다.
             S_CreateRoom sendPacket = new S_CreateRoom();
+            sendPacket.roomId = gameRoom.Id;
+            sendPacket.masterId = master.SessionId;
             sendPacket.roomName = gameRoom.RoomName;
             sendPacket.maxPlayer = gameRoom.MaxPlayer;
+
             Broadcast(sendPacket.Write());
         }
+
 
         public void SendRoomList(PacketSession session)
         {
@@ -77,6 +81,25 @@ namespace CrazyArcade_Server.Game
             }
 
             session.Send(roomListPacket.Write());
+        }
+
+        public GameRoom FindRoomById(int id)
+        {
+            foreach(GameRoom gameRoom in _gameRooms)
+            {
+                if (gameRoom.Id == id)
+                    return gameRoom;
+            }
+
+            Console.WriteLine("FindRoomById() : not found room");
+            return null;
+        }
+
+        public void EnterRoom(ClientSession client, int roomId)
+        {
+            Leave(client);
+            GameRoom enterRoom = FindRoomById(roomId);
+            enterRoom.Enter(client);
         }
     }
 }

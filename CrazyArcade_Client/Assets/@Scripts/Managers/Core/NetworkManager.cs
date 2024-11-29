@@ -24,6 +24,11 @@ public class ServerInstance
         if (_session == null)
             return;
 
+        List<IPacket> packets = PacketQueue.Instance.PopAll();
+        foreach(IPacket packet in packets)
+        {
+            PacketManager.Instance.HandlePacket(_session, packet);
+        }
     }
 
     public void Send(IPacket packet)

@@ -15,12 +15,7 @@ class PacketHandler
 
     public static void S_RoomListHandler(PacketSession session, IPacket packet)
     {
-        LobbyScene lobby = Managers.Scene.CurrentScene as LobbyScene;
-        if(lobby == null)
-        {
-            Debug.LogError("not find lobby");
-            return;
-        }
+        LobbyScene lobby = FindLobbyScene();
 
         S_RoomList roomList = packet as S_RoomList;
         List<GameRoom> gameRooms = new List<GameRoom>();
@@ -36,8 +31,21 @@ class PacketHandler
     
     public static void S_CreateRoomHandler(PacketSession session, IPacket packet)
     {
-        //TODO : 로비에 들어가 있는 아이들한테만 방이 만들어졌다는 패킷을 쏴야한다.
-        Debug.LogError("Create Room");
+        //TODO : 로비에 만들어진 Room을 넣기. -> UI 동기화하기.
+        LobbyScene lobby = FindLobbyScene();
+        S_CreateRoom createRoom = packet as S_CreateRoom;
+
+        GameRoom room = new GameRoom(createRoom.roomId);
+        room.RoomName = createRoom.roomName;
+        room.MaxPlayer = createRoom.maxPlayer;
+        lobby.AddRoom(room);
+
+        if(Managers.Game.Player.Id == createRoom.masterId)
+        {
+            C_EnterRoom enterPacket = new C_EnterRoom();
+            enterPacket.roomId = createRoom.roomId;
+            Managers.Network.Send(enterPacket);
+        }
     }
 
     public static void S_EnterPlayerHandler(PacketSession session, IPacket packet)
@@ -47,12 +55,7 @@ class PacketHandler
 
     public static void S_PlayerListHandler(PacketSession session, IPacket packet)
     {
-        LobbyScene lobby = Managers.Scene.CurrentScene as LobbyScene;
-        if (lobby == null)
-        {
-            Debug.LogError("not find lobby");
-            return;
-        }
+        LobbyScene lobby = FindLobbyScene();
 
         // 방에 들어간다.
         S_PlayerList roomPlayer = packet as S_PlayerList;
@@ -65,5 +68,17 @@ class PacketHandler
     public static void S_LeavePlyerHandler(PacketSession session, IPacket packet)
     {
 
+    }
+
+    private static LobbyScene FindLobbyScene()
+    {
+        LobbyScene lobby = Managers.Scene.CurrentScene as LobbyScene;
+        if (lobby == null)
+        {
+            Debug.LogError("not find lobby");
+            return null;
+        }
+
+        return lobby;
     }
 }

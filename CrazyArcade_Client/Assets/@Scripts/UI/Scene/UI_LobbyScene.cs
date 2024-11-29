@@ -27,6 +27,9 @@ public class UI_LobbyScene : UI_Scene
         BindObjects(typeof(GameObjects));
 
         _uiList = GetObject((int)GameObjects.RoomList).GetComponentsInChildren<UI_RoomToken>();
+        for (int i = 0; i < _uiList.Length; i++)
+            _uiList[i].OffActive();
+
         GetButton((int)Buttons.CreateRoomButton).onClick.AddListener(OnCreateRoom);
     }
 
@@ -42,6 +45,7 @@ public class UI_LobbyScene : UI_Scene
             if (i >= MAX_TOKEN)
                 break;
 
+            Debug.Log($"{_uiList.Length} / {list.Count} / {i}");
             _uiList[i].SetInfo(list[i]);
         }
 

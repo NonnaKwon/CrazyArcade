@@ -7,6 +7,7 @@ using static S_RoomList;
 
 public class Player : MonoBehaviour
 {
+    public int Id { get { return _id; } }
     public string Nickname { get { return _nickname; } set { _nickname = value; } }
     public bool IsReady { get { return _isReady; } set { _isReady = value; } }
     public Character Character { get { return _character; } set { _character = value; } }

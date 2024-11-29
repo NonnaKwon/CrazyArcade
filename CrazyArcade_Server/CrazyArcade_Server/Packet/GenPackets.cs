@@ -198,7 +198,8 @@ public class S_RoomList : IPacket
 
 public class C_CreateRoom : IPacket
 {
-    public string roomName;
+    public int roomId;
+	public string roomName;
 	public int maxPlayer;
 
 	public ushort Protocol { get { return (ushort)PacketID.C_CreateRoom; } }
@@ -209,7 +210,9 @@ public class C_CreateRoom : IPacket
 
         count += sizeof(ushort);
         count += sizeof(ushort);
-        ushort roomNameLen = BitConverter.ToUInt16(segment.Array, segment.Offset + count);
+        this.roomId = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		ushort roomNameLen = BitConverter.ToUInt16(segment.Array, segment.Offset + count);
 		count += sizeof(ushort);
 		this.roomName = Encoding.Unicode.GetString(segment.Array, segment.Offset + count,roomNameLen);
 		count += roomNameLen;
@@ -228,7 +231,9 @@ public class C_CreateRoom : IPacket
         Array.Copy(BitConverter.GetBytes((ushort)PacketID.C_CreateRoom), 0, segment.Array, segment.Offset + count, sizeof(ushort));
         count += sizeof(ushort);
 
-        ushort roomNameLen = (ushort)Encoding.Unicode.GetBytes(this.roomName, 0, this.roomName.Length, segment.Array, segment.Offset + count + sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes(this.roomId), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		ushort roomNameLen = (ushort)Encoding.Unicode.GetBytes(this.roomName, 0, this.roomName.Length, segment.Array, segment.Offset + count + sizeof(ushort));
 		Array.Copy(BitConverter.GetBytes(roomNameLen), 0, segment.Array, segment.Offset + count, sizeof(ushort));
 		count += sizeof(ushort);
 		count += roomNameLen;
@@ -243,7 +248,9 @@ public class C_CreateRoom : IPacket
 
 public class S_CreateRoom : IPacket
 {
-    public string roomName;
+    public int roomId;
+	public int masterId;
+	public string roomName;
 	public int maxPlayer;
 
 	public ushort Protocol { get { return (ushort)PacketID.S_CreateRoom; } }
@@ -254,7 +261,11 @@ public class S_CreateRoom : IPacket
 
         count += sizeof(ushort);
         count += sizeof(ushort);
-        ushort roomNameLen = BitConverter.ToUInt16(segment.Array, segment.Offset + count);
+        this.roomId = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		this.masterId = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		ushort roomNameLen = BitConverter.ToUInt16(segment.Array, segment.Offset + count);
 		count += sizeof(ushort);
 		this.roomName = Encoding.Unicode.GetString(segment.Array, segment.Offset + count,roomNameLen);
 		count += roomNameLen;
@@ -273,7 +284,11 @@ public class S_CreateRoom : IPacket
         Array.Copy(BitConverter.GetBytes((ushort)PacketID.S_CreateRoom), 0, segment.Array, segment.Offset + count, sizeof(ushort));
         count += sizeof(ushort);
 
-        ushort roomNameLen = (ushort)Encoding.Unicode.GetBytes(this.roomName, 0, this.roomName.Length, segment.Array, segment.Offset + count + sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes(this.roomId), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		Array.Copy(BitConverter.GetBytes(this.masterId), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		ushort roomNameLen = (ushort)Encoding.Unicode.GetBytes(this.roomName, 0, this.roomName.Length, segment.Array, segment.Offset + count + sizeof(ushort));
 		Array.Copy(BitConverter.GetBytes(roomNameLen), 0, segment.Array, segment.Offset + count, sizeof(ushort));
 		count += sizeof(ushort);
 		count += roomNameLen;

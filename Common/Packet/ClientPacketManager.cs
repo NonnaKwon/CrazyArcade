@@ -50,7 +50,7 @@ public class PacketManager
             if (onRecvCallback != null)
                 onRecvCallback.Invoke(session, packet);
             else
-                HandlePacket(session, packet);
+                PacketQueue.Instance.Push(packet);
         }
     }
 

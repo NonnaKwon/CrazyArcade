@@ -30,7 +30,6 @@ public class UI_RoomToken : UI_Base
         BindTexts(typeof(Texts));
         BindImages(typeof(Images));
         BindObjects(typeof(GameObjects));
-        OffActive();
     }
 
     public void SetInfo(GameRoom room)
@@ -45,7 +44,7 @@ public class UI_RoomToken : UI_Base
         gameObject.SetActive(true);
     }
 
-    private void OffActive()
+    public void OffActive()
     {
         gameObject.SetActive(false);
     }

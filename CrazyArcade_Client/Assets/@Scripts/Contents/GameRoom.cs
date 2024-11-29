@@ -27,7 +27,6 @@ public class GameRoom
         _isStart = false;
         _roomName = "";
     }
-    public GameRoom() { }
     public GameRoom(int id,string roomName, int map,int count,bool isStart)
     {
         _id = id;

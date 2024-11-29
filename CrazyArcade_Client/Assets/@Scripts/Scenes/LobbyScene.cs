@@ -5,7 +5,7 @@ using UnityEngine;
 public class LobbyScene : BaseScene
 {
     public List<GameRoom> GameRooms { set { _gameRooms = value; UpdateRoomList(); } }
-    private List<GameRoom> _gameRooms;
+    private List<GameRoom> _gameRooms = new List<GameRoom>();
     private UI_LobbyScene _ui;
 
     protected override void Awake()
@@ -34,6 +34,11 @@ public class LobbyScene : BaseScene
             Managers.Game.CurrentRoom = null;
     }
 
+    public void AddRoom(GameRoom gameRoom)
+    {
+        _gameRooms.Add(gameRoom);
+        UpdateRoomList();
+    }
 
     public void UpdateRoomList()
     {
