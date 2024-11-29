@@ -75,6 +75,7 @@ namespace CrazyArcade_Server.Game
                     id = room.Id,
                     roomName = room.RoomName,
                     map = (int)room.Map,
+                    maxPlayer = room.MaxPlayer,
                     playerCount = room.PlayerCount,
                     isStart = room.IsStart
                 });

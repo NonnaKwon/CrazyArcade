@@ -11,6 +11,7 @@
 			<int name ="id"/>
 			<string name ="roomName"/>
 			<int name ="map"/>
+			<int name ="maxPlayer"/>
 			<int name ="playerCount"/>
 			<bool name ="isStart"/>
 		</list>

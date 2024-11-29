@@ -14,9 +14,4 @@ public class GameManager
     {
         _player = null;
     }
-
-    void OnApplicationQuit()
-    {
-        Managers.Network.GameServer.Disconnect();
-    }
 }

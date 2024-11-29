@@ -66,7 +66,7 @@ public class MultiplayersBuildAndRun : MonoBehaviour
             BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
 
         // 해상도 설정
-        PlayerSettings.defaultScreenWidth = 700;
+        PlayerSettings.defaultScreenWidth = 650;
         PlayerSettings.defaultScreenHeight = 600;
         PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
 

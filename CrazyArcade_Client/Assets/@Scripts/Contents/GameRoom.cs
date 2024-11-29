@@ -6,6 +6,7 @@ using static Define;
 public class GameRoom
 {
     public string RoomName { get { return _roomName; } set { _roomName = value; } }
+    public int Id { get { return _id; } }
     public Map Map { get { return _map; } set { _map = value; } }
     public int PlayerCount { get { return _playerCount; } }
     public int MaxPlayer { get { return _maxPlayer; } set { _maxPlayer = value; } }
@@ -27,19 +28,16 @@ public class GameRoom
         _isStart = false;
         _roomName = "";
     }
-    public GameRoom(int id,string roomName, int map,int count,bool isStart)
+    public GameRoom(int id,string roomName, int map,int maxPlayer,int count,bool isStart)
     {
         _id = id;
         _roomName = roomName;
         _map = (Map)map;
+        _maxPlayer = maxPlayer;
         _playerCount = count;
         _isStart = isStart;
     }
 
-    public bool IsEqualId(int id)
-    {
-        return _id == id;
-    }
 
     public void UpdatePlayers(S_PlayerList players)
     {
@@ -60,7 +58,7 @@ public class GameRoom
 
     public void Leave()
     {
-
+        _playerCount--;
     }
 
     public void Enter(Player newPlayer)
@@ -75,10 +73,14 @@ public class GameRoom
         _playerCount++;
     }
 
-    public void TryEnterRoom()
+    public bool TryEnterRoom()
     {
+        if (_playerCount >= MaxPlayer)
+            return false;
+
         C_EnterRoom enterPacket = new C_EnterRoom();
         enterPacket.roomId = _id;
         Managers.Network.Send(enterPacket);
+        return true;
     }
 }

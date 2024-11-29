@@ -55,7 +55,7 @@ public class LobbyScene : BaseScene
         GameRoom targetRoom = null;
         for(int i=0;i< _gameRooms.Count;i++)
         {
-            if (_gameRooms[i].IsEqualId(roomId))
+            if (_gameRooms[i].Id == roomId)
             {
                 targetRoom = _gameRooms[i];
                 break;

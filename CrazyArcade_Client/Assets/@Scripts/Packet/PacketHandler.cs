@@ -22,7 +22,7 @@ class PacketHandler
         foreach(Room room in roomList.rooms)
         {
             gameRooms.Add(new GameRoom(
-                room.id,room.roomName,room.map,room.playerCount,room.isStart
+                room.id,room.roomName,room.map,room.maxPlayer,room.playerCount,room.isStart
             ));
         }
 

@@ -43,6 +43,13 @@ public class UI_RoomToken : UI_Base
     public void SetInfo(GameRoom room)
     {
         _roomInfo = room;
+        GetText((int)Texts.RoomNumber).text = $"{room.Id:000}";
+        GetText((int)Texts.RoomName).text = $"{room.RoomName}";
+        GetText((int)Texts.MaxNum).text = $"{room.MaxPlayer}";
+        GetText((int)Texts.NowNum).text = $"{room.PlayerCount}";
+
+        //TODO : 맵 스프라이트 설정해야함 : Title 완성되면.
+        //GetImage((int)Images.MapImage).sprite = Managers.Resource.Load<Sprite>(room.Map.ToString());
         OnActive();
     }
 

@@ -114,6 +114,7 @@ public class S_RoomList : IPacket
 	    public int id;
 		public string roomName;
 		public int map;
+		public int maxPlayer;
 		public int playerCount;
 		public bool isStart;
 	
@@ -126,6 +127,8 @@ public class S_RoomList : IPacket
 			this.roomName = Encoding.Unicode.GetString(segment.Array, segment.Offset + count,roomNameLen);
 			count += roomNameLen;
 			this.map = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+			count += sizeof(int);
+			this.maxPlayer = BitConverter.ToInt32(segment.Array, segment.Offset + count);
 			count += sizeof(int);
 			this.playerCount = BitConverter.ToInt32(segment.Array, segment.Offset + count);
 			count += sizeof(int);
@@ -143,6 +146,8 @@ public class S_RoomList : IPacket
 			count += sizeof(ushort);
 			count += roomNameLen;
 			Array.Copy(BitConverter.GetBytes(this.map), 0, segment.Array, segment.Offset + count, sizeof(int));
+			count += sizeof(int);
+			Array.Copy(BitConverter.GetBytes(this.maxPlayer), 0, segment.Array, segment.Offset + count, sizeof(int));
 			count += sizeof(int);
 			Array.Copy(BitConverter.GetBytes(this.playerCount), 0, segment.Array, segment.Offset + count, sizeof(int));
 			count += sizeof(int);
