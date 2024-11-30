@@ -35,9 +35,7 @@ class PacketHandler
         LobbyScene lobby = FindLobbyScene();
         S_CreateRoom createRoom = packet as S_CreateRoom;
 
-        GameRoom room = new GameRoom(createRoom.roomId);
-        room.RoomName = createRoom.roomName;
-        room.MaxPlayer = createRoom.maxPlayer;
+        GameRoom room = new GameRoom(createRoom.roomId, createRoom.roomName, createRoom.maxPlayer);
         lobby.AddRoom(room);
 
         if(Managers.Game.Player.Id == createRoom.masterId)

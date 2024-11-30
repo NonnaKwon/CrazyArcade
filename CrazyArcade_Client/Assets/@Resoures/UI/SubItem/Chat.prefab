@@ -120,8 +120,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8911702475878819794}
   m_HandleRect: {fileID: 2872530825723579958}
   m_Direction: 2
-  m_Value: 0.9999992
-  m_Size: 0.29833627
+  m_Value: 0.99999917
+  m_Size: 0.33466524
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -136,8 +136,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6277581764680378550}
   - component: {fileID: 7094862303384809690}
-  - component: {fileID: 3990211976271281463}
-  - component: {fileID: 8530862716501168354}
   m_Layer: 5
   m_Name: Chat
   m_TagString: Untagged
@@ -164,7 +162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.030650515, y: 0.04073217}
   m_AnchorMax: {x: 0.5592034, y: 0.28270355}
-  m_AnchoredPosition: {x: 0.22772, y: -1.211792}
+  m_AnchoredPosition: {x: 0.22772217, y: -1.211792}
   m_SizeDelta: {x: 0.45544, y: -1.4383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7094862303384809690
@@ -175,45 +173,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791976120405632060}
   m_CullTransparentMesh: 1
---- !u!114 &3990211976271281463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791976120405632060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f021cfba2775f2b48ba4b5989c77b6b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textPrefab: {fileID: 7859061449687145163, guid: 60fe8e8a8610a164b9bc6fa138495351, type: 3}
-  content: {fileID: 8460269337542740588}
-  chatView: {fileID: 7627750771162809784}
-  chatInput: {fileID: 2501273704413182689}
-  sendButton: {fileID: 8467101124040661271}
---- !u!114 &8530862716501168354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791976120405632060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: 0
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 1
-  isRuntimeInstantiated: 1
 --- !u!1 &2042186481617312312
 GameObject:
   m_ObjectHideFlags: 0
