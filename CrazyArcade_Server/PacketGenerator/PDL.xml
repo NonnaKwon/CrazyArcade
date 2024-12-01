@@ -50,4 +50,32 @@
 		<int name="roomId"/>
 		<int name="playerId"/>
 	</packet>
+	<packet name="C_UpdatePlayerInfo">
+		<int name="playerId"/>
+		<string name ="nickname"/>
+		<bool name ="isReady"/>
+		<int name ="character"/>
+	</packet>
+	<packet name="S_UpdatePlayerInfo">
+		<int name="playerId"/>
+		<string name ="nickname"/>
+		<bool name ="isReady"/>
+		<int name ="character"/>
+	</packet>
+	<packet name="C_UpdateRoomInfo">
+		<int name="roomId"/>
+		<int name="masterId"/>
+		<string name="roomName"/>
+		<int name="curPlayer"/>
+		<int name="maxPlayer"/>
+		<int name="map"/>
+	</packet>
+	<packet name="S_UpdateRoomInfo">
+		<int name="roomId"/>
+		<int name="masterId"/>
+		<string name="roomName"/>
+		<int name="curPlayer"/>
+		<int name="maxPlayer"/>
+		<int name="map"/>
+	</packet>
 </PDL>
