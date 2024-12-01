@@ -5,12 +5,12 @@ using static Define;
 
 public class GameRoom
 {
-    public string RoomName { get { return _roomName; } set { _roomName = value; } }
     public int Id { get { return _id; } }
-    public Map Map { get { return _map; } set { _map = value; } }
+    public string RoomName { get { return _roomName; } }
+    public Map Map { get { return _map; } }
     public int PlayerCount { get { return _playerCount; } }
-    public int MaxPlayer { get { return _maxPlayer; } set { _maxPlayer = value; } }
-    public bool IsStart { get { return _isStart; } set { _isStart = value; } }
+    public int MaxPlayer { get { return _maxPlayer; } }
+    public bool IsStart { get { return _isStart; } }
 
     private int _id;
     private string _roomName;
@@ -21,9 +21,11 @@ public class GameRoom
 
     private List<Player> _players = new List<Player>();
 
-    public GameRoom(int roomId)
+    public GameRoom(int roomId,string roomName,int maxPlayer)
     {
         _id = roomId;
+        _roomName = roomName;
+        _maxPlayer = maxPlayer;
         _map = Map.Block;
         _isStart = false;
         _roomName = "";
@@ -38,6 +40,11 @@ public class GameRoom
         _isStart = isStart;
     }
 
+    public void UpdateRoomInfo()
+    {
+        // TODO : 패킷을 보낸다.
+        // TODO : 서버에서 패킷이 되돌아오면, 게임룸UI, 로비씬UI 처리함.
+    }
 
     public void UpdatePlayers(S_PlayerList players)
     {
