@@ -54,12 +54,34 @@ class PacketHandler
         // 방에 들어간다.
         S_PlayerList roomPlayer = packet as S_PlayerList;
         GameRoom enterRoom = lobby.FindRoomById(roomPlayer.roomId);
-
         enterRoom.UpdatePlayers(roomPlayer);
         enterRoom.Enter(Managers.Game.Player);
     }
 
     public static void S_LeavePlyerHandler(PacketSession session, IPacket packet)
+    {
+        GameRoom room = Managers.Game.CurrentRoom;
+        if(room == null)
+        {
+            Debug.Log("현재 방 안에 있지 않음.");
+            return;
+        }
+
+        S_LeavePlayer leave = packet as S_LeavePlayer;
+        room.Leave(leave.playerId);
+    }
+
+    public static void S_LeavePlayerHandler(PacketSession session, IPacket packet)
+    {
+
+    }
+
+    public static void S_UpdatePlayerInfoHandler(PacketSession session, IPacket packet)
+    {
+
+    }
+
+    public static void S_UpdateRoomInfoHandler(PacketSession session, IPacket packet)
     {
 
     }

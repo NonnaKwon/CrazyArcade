@@ -15,7 +15,11 @@ public enum PacketID
 	S_EnterPlayer = 7,
 	S_PlayerList = 8,
 	C_LeaveRoom = 9,
-	S_LeavePlyer = 10,
+	S_LeavePlayer = 10,
+	C_UpdatePlayerInfo = 11,
+	S_UpdatePlayerInfo = 12,
+	C_UpdateRoomInfo = 13,
+	S_UpdateRoomInfo = 14,
 	
 }
 
@@ -480,45 +484,9 @@ public class S_PlayerList : IPacket
 public class C_LeaveRoom : IPacket
 {
     public int roomId;
-
-	public ushort Protocol { get { return (ushort)PacketID.C_LeaveRoom; } }
-
-    public void Read(ArraySegment<byte> segment)
-    {
-        ushort count = 0;
-
-        count += sizeof(ushort);
-        count += sizeof(ushort);
-        this.roomId = BitConverter.ToInt32(segment.Array, segment.Offset + count);
-		count += sizeof(int);
-    }
-
-    public ArraySegment<byte> Write()
-    {
-        ArraySegment<byte> segment = SendBufferHelper.Open(4096);
-
-        ushort count = 0;
-        bool success = true;
-
-        count += sizeof(ushort);
-        Array.Copy(BitConverter.GetBytes((ushort)PacketID.C_LeaveRoom), 0, segment.Array, segment.Offset + count, sizeof(ushort));
-        count += sizeof(ushort);
-
-        Array.Copy(BitConverter.GetBytes(this.roomId), 0, segment.Array, segment.Offset + count, sizeof(int));
-		count += sizeof(int);
-        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
-
-        return SendBufferHelper.Close(count);
-
-    }
-}
-
-public class S_LeavePlyer : IPacket
-{
-    public int roomId;
 	public int playerId;
 
-	public ushort Protocol { get { return (ushort)PacketID.S_LeavePlyer; } }
+	public ushort Protocol { get { return (ushort)PacketID.C_LeaveRoom; } }
 
     public void Read(ArraySegment<byte> segment)
     {
@@ -540,12 +508,293 @@ public class S_LeavePlyer : IPacket
         bool success = true;
 
         count += sizeof(ushort);
-        Array.Copy(BitConverter.GetBytes((ushort)PacketID.S_LeavePlyer), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes((ushort)PacketID.C_LeaveRoom), 0, segment.Array, segment.Offset + count, sizeof(ushort));
         count += sizeof(ushort);
 
         Array.Copy(BitConverter.GetBytes(this.roomId), 0, segment.Array, segment.Offset + count, sizeof(int));
 		count += sizeof(int);
 		Array.Copy(BitConverter.GetBytes(this.playerId), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
+
+        return SendBufferHelper.Close(count);
+
+    }
+}
+
+public class S_LeavePlayer : IPacket
+{
+    public int roomId;
+	public int playerId;
+
+	public ushort Protocol { get { return (ushort)PacketID.S_LeavePlayer; } }
+
+    public void Read(ArraySegment<byte> segment)
+    {
+        ushort count = 0;
+
+        count += sizeof(ushort);
+        count += sizeof(ushort);
+        this.roomId = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		this.playerId = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+    }
+
+    public ArraySegment<byte> Write()
+    {
+        ArraySegment<byte> segment = SendBufferHelper.Open(4096);
+
+        ushort count = 0;
+        bool success = true;
+
+        count += sizeof(ushort);
+        Array.Copy(BitConverter.GetBytes((ushort)PacketID.S_LeavePlayer), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        count += sizeof(ushort);
+
+        Array.Copy(BitConverter.GetBytes(this.roomId), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		Array.Copy(BitConverter.GetBytes(this.playerId), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
+
+        return SendBufferHelper.Close(count);
+
+    }
+}
+
+public class C_UpdatePlayerInfo : IPacket
+{
+    public int playerId;
+	public string nickname;
+	public bool isReady;
+	public int character;
+
+	public ushort Protocol { get { return (ushort)PacketID.C_UpdatePlayerInfo; } }
+
+    public void Read(ArraySegment<byte> segment)
+    {
+        ushort count = 0;
+
+        count += sizeof(ushort);
+        count += sizeof(ushort);
+        this.playerId = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		ushort nicknameLen = BitConverter.ToUInt16(segment.Array, segment.Offset + count);
+		count += sizeof(ushort);
+		this.nickname = Encoding.Unicode.GetString(segment.Array, segment.Offset + count,nicknameLen);
+		count += nicknameLen;
+		this.isReady = BitConverter.ToBoolean(segment.Array, segment.Offset + count);
+		count += sizeof(bool);
+		this.character = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+    }
+
+    public ArraySegment<byte> Write()
+    {
+        ArraySegment<byte> segment = SendBufferHelper.Open(4096);
+
+        ushort count = 0;
+        bool success = true;
+
+        count += sizeof(ushort);
+        Array.Copy(BitConverter.GetBytes((ushort)PacketID.C_UpdatePlayerInfo), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        count += sizeof(ushort);
+
+        Array.Copy(BitConverter.GetBytes(this.playerId), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		ushort nicknameLen = (ushort)Encoding.Unicode.GetBytes(this.nickname, 0, this.nickname.Length, segment.Array, segment.Offset + count + sizeof(ushort));
+		Array.Copy(BitConverter.GetBytes(nicknameLen), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+		count += sizeof(ushort);
+		count += nicknameLen;
+		Array.Copy(BitConverter.GetBytes(this.isReady), 0, segment.Array, segment.Offset + count, sizeof(bool));
+		count += sizeof(bool);
+		Array.Copy(BitConverter.GetBytes(this.character), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
+
+        return SendBufferHelper.Close(count);
+
+    }
+}
+
+public class S_UpdatePlayerInfo : IPacket
+{
+    public int playerId;
+	public string nickname;
+	public bool isReady;
+	public int character;
+
+	public ushort Protocol { get { return (ushort)PacketID.S_UpdatePlayerInfo; } }
+
+    public void Read(ArraySegment<byte> segment)
+    {
+        ushort count = 0;
+
+        count += sizeof(ushort);
+        count += sizeof(ushort);
+        this.playerId = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		ushort nicknameLen = BitConverter.ToUInt16(segment.Array, segment.Offset + count);
+		count += sizeof(ushort);
+		this.nickname = Encoding.Unicode.GetString(segment.Array, segment.Offset + count,nicknameLen);
+		count += nicknameLen;
+		this.isReady = BitConverter.ToBoolean(segment.Array, segment.Offset + count);
+		count += sizeof(bool);
+		this.character = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+    }
+
+    public ArraySegment<byte> Write()
+    {
+        ArraySegment<byte> segment = SendBufferHelper.Open(4096);
+
+        ushort count = 0;
+        bool success = true;
+
+        count += sizeof(ushort);
+        Array.Copy(BitConverter.GetBytes((ushort)PacketID.S_UpdatePlayerInfo), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        count += sizeof(ushort);
+
+        Array.Copy(BitConverter.GetBytes(this.playerId), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		ushort nicknameLen = (ushort)Encoding.Unicode.GetBytes(this.nickname, 0, this.nickname.Length, segment.Array, segment.Offset + count + sizeof(ushort));
+		Array.Copy(BitConverter.GetBytes(nicknameLen), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+		count += sizeof(ushort);
+		count += nicknameLen;
+		Array.Copy(BitConverter.GetBytes(this.isReady), 0, segment.Array, segment.Offset + count, sizeof(bool));
+		count += sizeof(bool);
+		Array.Copy(BitConverter.GetBytes(this.character), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
+
+        return SendBufferHelper.Close(count);
+
+    }
+}
+
+public class C_UpdateRoomInfo : IPacket
+{
+    public int roomId;
+	public int masterId;
+	public string roomName;
+	public int curPlayer;
+	public int maxPlayer;
+	public int map;
+
+	public ushort Protocol { get { return (ushort)PacketID.C_UpdateRoomInfo; } }
+
+    public void Read(ArraySegment<byte> segment)
+    {
+        ushort count = 0;
+
+        count += sizeof(ushort);
+        count += sizeof(ushort);
+        this.roomId = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		this.masterId = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		ushort roomNameLen = BitConverter.ToUInt16(segment.Array, segment.Offset + count);
+		count += sizeof(ushort);
+		this.roomName = Encoding.Unicode.GetString(segment.Array, segment.Offset + count,roomNameLen);
+		count += roomNameLen;
+		this.curPlayer = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		this.maxPlayer = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		this.map = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+    }
+
+    public ArraySegment<byte> Write()
+    {
+        ArraySegment<byte> segment = SendBufferHelper.Open(4096);
+
+        ushort count = 0;
+        bool success = true;
+
+        count += sizeof(ushort);
+        Array.Copy(BitConverter.GetBytes((ushort)PacketID.C_UpdateRoomInfo), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        count += sizeof(ushort);
+
+        Array.Copy(BitConverter.GetBytes(this.roomId), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		Array.Copy(BitConverter.GetBytes(this.masterId), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		ushort roomNameLen = (ushort)Encoding.Unicode.GetBytes(this.roomName, 0, this.roomName.Length, segment.Array, segment.Offset + count + sizeof(ushort));
+		Array.Copy(BitConverter.GetBytes(roomNameLen), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+		count += sizeof(ushort);
+		count += roomNameLen;
+		Array.Copy(BitConverter.GetBytes(this.curPlayer), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		Array.Copy(BitConverter.GetBytes(this.maxPlayer), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		Array.Copy(BitConverter.GetBytes(this.map), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
+
+        return SendBufferHelper.Close(count);
+
+    }
+}
+
+public class S_UpdateRoomInfo : IPacket
+{
+    public int roomId;
+	public int masterId;
+	public string roomName;
+	public int curPlayer;
+	public int maxPlayer;
+	public int map;
+
+	public ushort Protocol { get { return (ushort)PacketID.S_UpdateRoomInfo; } }
+
+    public void Read(ArraySegment<byte> segment)
+    {
+        ushort count = 0;
+
+        count += sizeof(ushort);
+        count += sizeof(ushort);
+        this.roomId = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		this.masterId = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		ushort roomNameLen = BitConverter.ToUInt16(segment.Array, segment.Offset + count);
+		count += sizeof(ushort);
+		this.roomName = Encoding.Unicode.GetString(segment.Array, segment.Offset + count,roomNameLen);
+		count += roomNameLen;
+		this.curPlayer = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		this.maxPlayer = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+		this.map = BitConverter.ToInt32(segment.Array, segment.Offset + count);
+		count += sizeof(int);
+    }
+
+    public ArraySegment<byte> Write()
+    {
+        ArraySegment<byte> segment = SendBufferHelper.Open(4096);
+
+        ushort count = 0;
+        bool success = true;
+
+        count += sizeof(ushort);
+        Array.Copy(BitConverter.GetBytes((ushort)PacketID.S_UpdateRoomInfo), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+        count += sizeof(ushort);
+
+        Array.Copy(BitConverter.GetBytes(this.roomId), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		Array.Copy(BitConverter.GetBytes(this.masterId), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		ushort roomNameLen = (ushort)Encoding.Unicode.GetBytes(this.roomName, 0, this.roomName.Length, segment.Array, segment.Offset + count + sizeof(ushort));
+		Array.Copy(BitConverter.GetBytes(roomNameLen), 0, segment.Array, segment.Offset + count, sizeof(ushort));
+		count += sizeof(ushort);
+		count += roomNameLen;
+		Array.Copy(BitConverter.GetBytes(this.curPlayer), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		Array.Copy(BitConverter.GetBytes(this.maxPlayer), 0, segment.Array, segment.Offset + count, sizeof(int));
+		count += sizeof(int);
+		Array.Copy(BitConverter.GetBytes(this.map), 0, segment.Array, segment.Offset + count, sizeof(int));
 		count += sizeof(int);
         Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));
 

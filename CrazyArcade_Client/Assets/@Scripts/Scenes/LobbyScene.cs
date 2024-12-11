@@ -31,7 +31,9 @@ public class LobbyScene : BaseScene
         Managers.Network.Send(enterPacket);
 
         if (Managers.Game.CurrentRoom != null)
-            Managers.Game.CurrentRoom = null;
+        {
+            Managers.Game.LeaveCurrentRoom();
+        }
     }
 
     public void AddRoom(GameRoom gameRoom)

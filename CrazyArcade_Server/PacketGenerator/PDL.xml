@@ -46,8 +46,7 @@
 	<packet name="C_LeaveRoom">
 		<int name="roomId"/>
 	</packet>
-	<packet name="S_LeavePlyer">
-		<int name="roomId"/>
+	<packet name="S_LeavePlayer">
 		<int name="playerId"/>
 	</packet>
 	<packet name="C_UpdatePlayerInfo">

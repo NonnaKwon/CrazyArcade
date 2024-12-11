@@ -36,6 +36,8 @@ class PacketHandler
 
     public static void C_LeaveRoomHandler(PacketSession session, IPacket packet)
     {
-
+        C_LeaveRoom leaveInfo = packet as C_LeaveRoom;
+        GameRoom room = Program.Lobby.FindRoomById(leaveInfo.roomId);
+        room.Leave(session as ClientSession);
     }
 }

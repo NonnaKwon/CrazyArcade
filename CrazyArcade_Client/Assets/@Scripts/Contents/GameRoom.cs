@@ -63,8 +63,16 @@ public class GameRoom
         _playerCount = _players.Count;
     }
 
-    public void Leave()
+    public void Leave(int playerId)
     {
+        foreach(Player player in _players)
+        {
+            if(player.Id == playerId)
+            {
+                _players.Remove(player);
+                break;
+            }
+        }
         _playerCount--;
     }
 

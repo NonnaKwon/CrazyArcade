@@ -30,8 +30,12 @@ public class PacketManager
         _handler.Add((ushort)PacketID.S_EnterPlayer, PacketHandler.S_EnterPlayerHandler);
         _makeFunc.Add((ushort)PacketID.S_PlayerList, MakePacket<S_PlayerList>);
         _handler.Add((ushort)PacketID.S_PlayerList, PacketHandler.S_PlayerListHandler);
-        _makeFunc.Add((ushort)PacketID.S_LeavePlyer, MakePacket<S_LeavePlyer>);
-        _handler.Add((ushort)PacketID.S_LeavePlyer, PacketHandler.S_LeavePlyerHandler);
+        _makeFunc.Add((ushort)PacketID.S_LeavePlayer, MakePacket<S_LeavePlayer>);
+        _handler.Add((ushort)PacketID.S_LeavePlayer, PacketHandler.S_LeavePlayerHandler);
+        _makeFunc.Add((ushort)PacketID.S_UpdatePlayerInfo, MakePacket<S_UpdatePlayerInfo>);
+        _handler.Add((ushort)PacketID.S_UpdatePlayerInfo, PacketHandler.S_UpdatePlayerInfoHandler);
+        _makeFunc.Add((ushort)PacketID.S_UpdateRoomInfo, MakePacket<S_UpdateRoomInfo>);
+        _handler.Add((ushort)PacketID.S_UpdateRoomInfo, PacketHandler.S_UpdateRoomInfoHandler);
     }
 
     public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer,Action<PacketSession,IPacket> onRecvCallback = null)

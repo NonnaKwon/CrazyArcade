@@ -28,6 +28,10 @@ public class PacketManager
         _handler.Add((ushort)PacketID.C_EnterRoom, PacketHandler.C_EnterRoomHandler);
         _makeFunc.Add((ushort)PacketID.C_LeaveRoom, MakePacket<C_LeaveRoom>);
         _handler.Add((ushort)PacketID.C_LeaveRoom, PacketHandler.C_LeaveRoomHandler);
+        _makeFunc.Add((ushort)PacketID.C_UpdatePlayerInfo, MakePacket<C_UpdatePlayerInfo>);
+        _handler.Add((ushort)PacketID.C_UpdatePlayerInfo, PacketHandler.C_UpdatePlayerInfoHandler);
+        _makeFunc.Add((ushort)PacketID.C_UpdateRoomInfo, MakePacket<C_UpdateRoomInfo>);
+        _handler.Add((ushort)PacketID.C_UpdateRoomInfo, PacketHandler.C_UpdateRoomInfoHandler);
     }
 
     public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer,Action<PacketSession,IPacket> onRecvCallback = null)

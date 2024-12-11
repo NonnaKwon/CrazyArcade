@@ -19,7 +19,6 @@ namespace CrazyArcade_Server.Game
             foreach (ClientSession s in _sessions)
                 s.Send(_pendingList);
 
-            //Console.WriteLine($"Flused {_pendingList.Count} Items");
             _pendingList.Clear();
         }
 
@@ -69,9 +68,9 @@ namespace CrazyArcade_Server.Game
             session.Room = null;
 
             //모두에게 알린다
-            //S_BroadcastLeaveGame leave = new S_BroadcastLeaveGame();
-            //leave.playerId = session.SessionId;
-            //Broadcast(leave.Write());
+            S_LeavePlayer leave = new S_LeavePlayer();
+            leave.playerId = session.SessionId;
+            Broadcast(leave.Write());
         }
 
     }
