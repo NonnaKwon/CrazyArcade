@@ -42,11 +42,18 @@ public class UI_GameRoomScene : UI_Scene
         _userUI = GetComponentsInChildren<UI_UserToken>();
         foreach (UI_UserToken token in _userUI)
             token.SetActive(false);
+        UpdateUI(Managers.Game.CurrentRoom);
     }
 
     public void UpdateUI(GameRoom roomInfo)
     {
+        if(roomInfo == null)
+        {
+            Debug.Log("Not found roomInfo");
+            return;
+        }
 
+        
     }
 
 
